@@ -13,8 +13,28 @@
             font-family: 'Inter', sans-serif;
         }
         
-        .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .hero-background {
+            background-image: url('images/gemini-2.5-flash-image_falla_in_orizzontale-0.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
         
         .sport-card {
@@ -94,9 +114,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section id="home" class="hero-background min-h-screen flex items-center pt-20">
+        <div class="hero-content container mx-auto px-6">
+            <div class="max-w-2xl">
                 <div class="text-white slide-in">
                     <h1 class="text-5xl md:text-6xl font-bold mb-6">
                         Abbigliamento Sportivo<br>
@@ -113,13 +133,6 @@
                         <a href="#sport" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-center hover:bg-gray-100 transition">
                             Scopri gli Sport
                         </a>
-                    </div>
-                </div>
-                <div class="floating">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                             alt="Ciclisti in azione" 
-                             class="rounded-2xl w-full h-auto">
                     </div>
                 </div>
             </div>

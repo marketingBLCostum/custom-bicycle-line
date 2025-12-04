@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicycle Line - Abbigliamento Sportivo Personalizzato</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .sport-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .sport-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .slide-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .slide-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-bicycle text-purple-600 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">Bicycle Line</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition">Home</a>
+                    <a href="#sport" class="text-gray-700 hover:text-purple-600 transition">Sport</a>
+                    <a href="#servizi" class="text-gray-700 hover:text-purple-600 transition">Servizi</a>
+                    <a href="#contatti" class="text-gray-700 hover:text-purple-600 transition">Contatti</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-purple-600 transition">Home</a>
+                <a href="#sport" class="block text-gray-700 hover:text-purple-600 transition">Sport</a>
+                <a href="#servizi" class="block text-gray-700 hover:text-purple-600 transition">Servizi</a>
+                <a href="#contatti" class="block text-gray-700 hover:text-purple-600 transition">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white slide-in">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        Abbigliamento Sportivo<br>
+                        <span class="text-yellow-300">Personalizzato</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-100">
+                        Specializzati in capi custom per ciclismo, atletica, triathlon e pattinaggio. 
+                        Trasformiamo la tua squadra in un brand unico.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contatti" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-center">
+                            Richiedi Preventivo
+                        </a>
+                        <a href="#sport" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-center hover:bg-gray-100 transition">
+                            Scopri gli Sport
+                        </a>
+                    </div>
+                </div>
+                <div class="floating">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Ciclisti in azione" 
+                             class="rounded-2xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Section -->
+    <section id="sport" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    Sport che Trattiamo
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Creiamo abbigliamento tecnico e personalizzato per ogni disciplina sportiva
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Ciclismo -->
+                <div class="sport-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center slide-in">
+                    <div class="bg-blue-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bicycle text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Ciclismo</h3>
+                    <p class="text-gray-600 mb-6">
+                        Maglie, pantaloncini e accessori tecnici personalizzati per ciclisti professionisti e amatoriali.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Maglie tecniche</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Pantaloncini con fondello</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i>Gilet e giacche</li>
+                    </ul>
+                </div>
+
+                <!-- Atletica -->
+                <div class="sport-card bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center slide-in">
+                    <div class="bg-green-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-running text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Atletica</h3>
+                    <p class="text-gray-600 mb-6">
+                        Divise personalizzate per atleti di corsa, salti e lanci con materiali tecnici di alta qualità.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Canotte e maglie</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Short e pantaloni</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Tute da gara</li>
+                    </ul>
+                </div>
+
+                <!-- Triathlon -->
+                <div class="sport-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center slide-in">
+                    <div class="bg-purple-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-swimmer text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Triathlon</h3>
+                    <p class="text-gray-600 mb-6">
+                        Abbigliamento multifunzione per nuoto, ciclismo e corsa con massima performance.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-purple-500 mr-2"></i>Mute triathlon</li>
+                        <li><i class="fas fa-check text-purple-500 mr-2"></i>Completi race</li>
+                        <li><i class="fas fa-check text-purple-500 mr-2"></i>Accessori tecnici</li>
+                    </ul>
+                </div>
+
+                <!-- Pattinaggio -->
+                <div class="sport-card bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 text-center slide-in">
+                    <div class="bg-red-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-skating text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Pattinaggio</h3>
+                    <p class="text-gray-600 mb-6">
+                        Abbigliamento elegante e tecnico per pattinatori artistici e di velocità.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-red-500 mr-2"></i>Costumi artistici</li>
+                        <li><i class="fas fa-check text-red-500 mr-2"></i>Tute da velocità</li>
+                        <li><i class="fas fa-check text-red-500 mr-2"></i>Training wear</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servizi" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    I Nostri Servizi
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Dalla progettazione alla consegna, seguiamo ogni passo con professionalità
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center slide-in">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-palette text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Design Personalizzato</h3>
+                    <p class="text-gray-600">
+                        Creiamo design unici che rappresentano la tua squadra e i tuoi valori
+                    </p>
+                </div>
+
+                <div class="text-center slide-in">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tshirt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Materiali Premium</h3>
+                    <p class="text-gray-600">
+                        Utilizziamo solo tessuti tecnici di alta qualità per massima performance
+                    </p>
+                </div>
+
+                <div class="text-center slide-in">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-truck text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Consegna Rapida</h3>
+                    <p class="text-gray-600">
+                        Tempi di produzione ottimizzati e consegna in tutta Italia
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contatti" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    Contattaci
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Richiedi un preventivo personalizzato per la tua squadra
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <form id="contact-form" class="bg-gray-50 rounded-2xl p-8">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Nome *</label>
+                            <input type="text" id="name" required 
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Cognome *</label>
+                            <input type="text" id="surname" required 
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:outline-none transition">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Email *</label>
+                        <input type="email" id="email" required 
+                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:outline-none transition">
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Telefono</label>
+                        <input type="tel" id="phone" 
+                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:outline-none transition">
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Sport di interesse *</label>
+                        <select id="sport" required 
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:outline-none transition">
+                            <option value="">Seleziona uno sport</option>
+                            <option value="ciclismo">Ciclismo</option>
+                            <option value="atletica">Atletica</option>
+                            <option value="triathlon">Triathlon</option>
+                            <option value="pattinaggio">Pattinaggio</option>
+                            <option value="altro">Altro</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">Messaggio *</label>
+                        <textarea id="message" required rows="5" 
+                                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-purple-500 focus:outline-none transition"
+                                  placeholder="Descrici le tue esigenze e il numero di atleti della squadra..."></textarea>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="flex items-center">
+                            <input type="checkbox" id="privacy" required class="mr-2">
+                            <span class="text-gray-700 text-sm">
+                                Accetto la privacy policy e i termini di servizio *
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" 
+                            class="w-full btn-primary text-white py-4 rounded-lg font-semibold text-lg">
+                        Invia Richiesta
+                    </button>
+                </form>
+
+                <div id="success-message" class="hidden mt-6 bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    Grazie per la tua richiesta! Ti contatteremo quanto prima.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-bicycle text-purple-400 text-2xl"></i>
+                        <span class="text-xl font-bold">Bicycle Line</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Il tuo partner fidato per abbigliamento sportivo personalizzato di alta qualità.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Sport Trattati</h4>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>Ciclismo</li>
+                        <li>Atletica</li>
+                        <li>Triathlon</li>
+                        <li>Pattinaggio</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contatti</h4>
+                    <ul class="text-gray-400 space-y-2">
+                        <li><i class="fas fa-envelope mr-2"></i>info@bicycleline.it</li>
+                        <li><i class="fas fa-phone mr-2"></i>+39 123 4567890</li>
+                        <li><i class="fas fa-clock mr-2"></i>Lun-Ven: 9:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Bicycle Line. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

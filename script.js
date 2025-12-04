@@ -177,14 +177,7 @@ document.querySelectorAll('img').forEach(img => {
     });
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroSection = document.querySelector('#home');
-    if (heroSection) {
-        heroSection.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
+// Parallax effect removed - hero section stays fixed
 
 // Counter animation for statistics (if added in the future)
 function animateCounter(element, target, duration = 2000) {
@@ -222,14 +215,6 @@ function debounce(func, wait) {
     };
 }
 
-// Apply debounce to scroll events
-window.addEventListener('scroll', debounce(() => {
-    // Scroll-based animations
-    const scrolled = window.pageYOffset;
-    const heroSection = document.querySelector('#home');
-    if (heroSection) {
-        heroSection.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-}, 10));
+// Apply debounce to scroll events (parallax removed)
 
 console.log('Bicycle Line - Landing page loaded successfully!');

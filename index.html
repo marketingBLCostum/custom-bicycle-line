@@ -142,10 +142,12 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <div class="text-center slide-in">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-palette text-purple-600 text-2xl"></i>
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-12 h-12 text-gray-800" fill="currentColor" stroke="none" viewBox="0 0 24 24">
+                            <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Design Personalizzato</h3>
                     <p class="text-gray-600">
@@ -154,8 +156,10 @@
                 </div>
 
                 <div class="text-center slide-in">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-tshirt text-purple-600 text-2xl"></i>
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-12 h-12 text-gray-800" fill="currentColor" stroke="none" viewBox="0 0 24 24">
+                            <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Materiali Premium</h3>
                     <p class="text-gray-600">
@@ -164,8 +168,10 @@
                 </div>
 
                 <div class="text-center slide-in">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-truck text-purple-600 text-2xl"></i>
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-12 h-12 text-gray-800" fill="currentColor" stroke="none" viewBox="0 0 24 24">
+                            <path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4-2a2 2 0 104 0m6 4a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Consegna Rapida</h3>
                     <p class="text-gray-600">
@@ -188,84 +194,108 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
                 <!-- Ciclismo -->
-                <div class="group relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10"></div>
-                    <div class="relative h-80 overflow-hidden">
+                <div class="group relative bg-black rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+                    <div class="relative h-[36rem] overflow-hidden">
                         <img src="images/CICLISMO.jpg" 
                              alt="Ciclismo" 
-                             class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                             class="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 z-20">
-                        <div class="flex items-center space-x-3 mb-3">
-                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
-                                <i class="fas fa-bicycle text-white text-xl"></i>
-                            </div>
-                            <span class="text-blue-400 text-sm font-semibold uppercase tracking-wider">Performance</span>
+                    <div class="absolute inset-0 p-8 z-20 flex flex-col justify-between">
+                        <div>
+                            <p class="text-white text-lg font-semibold">Sequence of Speed</p>
                         </div>
-                        <h3 class="text-3xl font-bold text-white mb-2">CICLISMO</h3>
-                        <p class="text-gray-300 text-sm">Abbigliamento tecnico per massime prestazioni</p>
+                        <div class="text-center">
+                            <h3 class="text-6xl font-bold text-white">DROME</h3>
+                            <p class="text-white text-lg mt-2">Session after session.</p>
+                            <p class="text-white text-lg font-bold">TRAINING</p>
+                        </div>
+                        <div class="flex justify-end">
+                            <a href="#" class="bg-white text-gray-900 px-6 py-3 rounded-full text-lg font-semibold flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span>Shop</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Atletica -->
-                <div class="group relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10"></div>
-                    <div class="relative h-80 overflow-hidden">
+                <div class="group relative bg-black rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+                    <div class="relative h-[36rem] overflow-hidden">
                         <img src="images/ATLETICA.jpg" 
                              alt="Atletica" 
-                             class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                             class="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 z-20">
-                        <div class="flex items-center space-x-3 mb-3">
-                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                                <i class="fas fa-running text-white text-xl"></i>
-                            </div>
-                            <span class="text-green-400 text-sm font-semibold uppercase tracking-wider">Speed</span>
+                    <div class="absolute inset-0 p-8 z-20 flex flex-col justify-between">
+                        <div>
+                            <p class="text-white text-lg font-semibold">Velocity in Motion</p>
                         </div>
-                        <h3 class="text-3xl font-bold text-white mb-2">ATLETICA</h3>
-                        <p class="text-gray-300 text-sm">Leggerezza e traspirabilità per runners</p>
+                        <div class="text-center">
+                            <h3 class="text-6xl font-bold text-white">TRACK</h3>
+                            <p class="text-white text-lg mt-2">Step by step.</p>
+                            <p class="text-white text-lg font-bold">RUNNING</p>
+                        </div>
+                        <div class="flex justify-end">
+                            <a href="#" class="bg-white text-gray-900 px-6 py-3 rounded-full text-lg font-semibold flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span>Shop</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Triathlon -->
-                <div class="group relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10"></div>
-                    <div class="relative h-80 overflow-hidden">
+                <div class="group relative bg-black rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+                    <div class="relative h-[36rem] overflow-hidden">
                         <img src="images/TRIATHLON.jpg" 
                              alt="Triathlon" 
-                             class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                             class="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 z-20">
-                        <div class="flex items-center space-x-3 mb-3">
-                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
-                                <i class="fas fa-swimmer text-white text-xl"></i>
-                            </div>
-                            <span class="text-purple-400 text-sm font-semibold uppercase tracking-wider">Endurance</span>
+                    <div class="absolute inset-0 p-8 z-20 flex flex-col justify-between">
+                        <div>
+                            <p class="text-white text-lg font-semibold">Triple Challenge</p>
                         </div>
-                        <h3 class="text-3xl font-bold text-white mb-2">TRIATHLON</h3>
-                        <p class="text-gray-300 text-sm">Completi race per le tre discipline</p>
+                        <div class="text-center">
+                            <h3 class="text-6xl font-bold text-white">RACE</h3>
+                            <p class="text-white text-lg mt-2">Discipline by discipline.</p>
+                            <p class="text-white text-lg font-bold">ENDURANCE</p>
+                        </div>
+                        <div class="flex justify-end">
+                            <a href="#" class="bg-white text-gray-900 px-6 py-3 rounded-full text-lg font-semibold flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span>Shop</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Pattinaggio -->
-                <div class="group relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10"></div>
-                    <div class="relative h-80 overflow-hidden">
+                <div class="group relative bg-black rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+                    <div class="relative h-[36rem] overflow-hidden">
                         <img src="images/PATTINAGGIO.jpg" 
                              alt="Pattinaggio" 
-                             class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                             class="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-110">
                     </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 z-20">
-                        <div class="flex items-center space-x-3 mb-3">
-                            <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
-                                <i class="fas fa-skating text-white text-xl"></i>
-                            </div>
-                            <span class="text-red-400 text-sm font-semibold uppercase tracking-wider">Style</span>
+                    <div class="absolute inset-0 p-8 z-20 flex flex-col justify-between">
+                        <div>
+                            <p class="text-white text-lg font-semibold">Art on Wheels</p>
                         </div>
-                        <h3 class="text-3xl font-bold text-white mb-2">PATTINAGGIO</h3>
-                        <p class="text-gray-300 text-sm">Eleganza e funzionalità per artisti</p>
+                        <div class="text-center">
+                            <h3 class="text-6xl font-bold text-white">GLIDE</h3>
+                            <p class="text-white text-lg mt-2">Move by move.</p>
+                            <p class="text-white text-lg font-bold">STYLE</p>
+                        </div>
+                        <div class="flex justify-end">
+                            <a href="#" class="bg-white text-gray-900 px-6 py-3 rounded-full text-lg font-semibold flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span>Shop</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

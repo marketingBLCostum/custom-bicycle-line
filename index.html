@@ -80,6 +80,85 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            margin: 0 -1.5rem;
+            padding: 0 1.5rem;
+        }
+        
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.5s ease;
+            will-change: transform;
+        }
+        
+        .carousel-item {
+            flex: 0 0 280px;
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-nav:hover {
+            background: #f3f4f6;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .carousel-nav.prev {
+            left: -25px;
+        }
+        
+        .carousel-nav.next {
+            right: -25px;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel-item {
+                flex: 0 0 240px;
+            }
+            
+            .carousel-nav {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .carousel-nav.prev {
+                left: 10px;
+            }
+            
+            .carousel-nav.next {
+                right: 10px;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -94,7 +173,7 @@
                     <a href="#home" class="text-white hover:text-purple-400 transition">Home</a>
                     <a href="#sport" class="text-white hover:text-purple-400 transition">Sport</a>
                     <a href="#portfolio" class="text-white hover:text-purple-400 transition">Portfolio</a>
-                    <a href="#personalizza" class="text-white hover:text-purple-400 transition">Servizi</a>
+                    <a href="#personalizza" class="text-white hover:text-purple-400 transition">Personalizza</a>
                     <a href="#contatti" class="text-white hover:text-purple-400 transition">Contatti</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-white">
@@ -108,7 +187,7 @@
                 <a href="#home" class="block text-white hover:text-purple-400 transition">Home</a>
                 <a href="#sport" class="block text-white hover:text-purple-400 transition">Sport</a>
                 <a href="#portfolio" class="block text-white hover:text-purple-400 transition">Portfolio</a>
-                <a href="#personalizza" class="block text-white hover:text-purple-400 transition">Servizi</a>
+                <a href="#personalizza" class="block text-white hover:text-purple-400 transition">Personalizza</a>
                 <a href="#contatti" class="block text-white hover:text-purple-400 transition">Contatti</a>
             </div>
         </div>
@@ -361,130 +440,141 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <!-- Portfolio Item 1 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-blue-100 to-blue-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-bicycle text-blue-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-blue-300 rounded-lg opacity-50"></div>
+            <!-- Carousel Container -->
+            <div class="carousel-container">
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Design Item 1 -->
+                    <div class="carousel-item">
+                        <div class="aspect-[3/4] bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center p-6">
+                            <div class="text-center">
+                                <img src="images/design1.jpg" alt="Design Ciclismo" class="w-full h-48 object-cover rounded-lg mb-4" 
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-48 bg-blue-300 rounded-lg flex items-center justify-center" style="display: none;">
+                                    <i class="fas fa-bicycle text-blue-500 text-4xl"></i>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-4">Team Ciclismo Pro</h3>
+                                <p class="text-sm text-gray-600">Design aerodinamico</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Item 2 -->
+                    <div class="carousel-item">
+                        <div class="aspect-[3/4] bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center p-6">
+                            <div class="text-center">
+                                <img src="images/design2.jpg" alt="Design Atletica" class="w-full h-48 object-cover rounded-lg mb-4"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-48 bg-green-300 rounded-lg flex items-center justify-center" style="display: none;">
+                                    <i class="fas fa-running text-green-500 text-4xl"></i>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-4">Atletica Club</h3>
+                                <p class="text-sm text-gray-600">Performance e stile</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Item 3 -->
+                    <div class="carousel-item">
+                        <div class="aspect-[3/4] bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center p-6">
+                            <div class="text-center">
+                                <img src="images/design3.jpg" alt="Design Triathlon" class="w-full h-48 object-cover rounded-lg mb-4"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-48 bg-purple-300 rounded-lg flex items-center justify-center" style="display: none;">
+                                    <i class="fas fa-swimmer text-purple-500 text-4xl"></i>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-4">Triathlon Team</h3>
+                                <p class="text-sm text-gray-600">Versatilità estrema</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Item 4 -->
+                    <div class="carousel-item">
+                        <div class="aspect-[3/4] bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center p-6">
+                            <div class="text-center">
+                                <img src="images/design4.jpg" alt="Design Pattinaggio" class="w-full h-48 object-cover rounded-lg mb-4"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-48 bg-red-300 rounded-lg flex items-center justify-center" style="display: none;">
+                                    <i class="fas fa-skating text-red-500 text-4xl"></i>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-4">Pattinaggio Artistico</h3>
+                                <p class="text-sm text-gray-600">Eleganza sul ghiaccio</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Item 5 -->
+                    <div class="carousel-item">
+                        <div class="aspect-[3/4] bg-gradient-to-br from-yellow-100 to-orange-200 flex items-center justify-center p-6">
+                            <div class="text-center">
+                                <img src="images/design5.jpg" alt="Design Custom" class="w-full h-48 object-cover rounded-lg mb-4"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-48 bg-orange-300 rounded-lg flex items-center justify-center" style="display: none;">
+                                    <i class="fas fa-tshirt text-orange-500 text-4xl"></i>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-4">Custom Racing</h3>
+                                <p class="text-sm text-gray-600">Design esclusivo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Item 6 -->
+                    <div class="carousel-item">
+                        <div class="aspect-[3/4] bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center p-6">
+                            <div class="text-center">
+                                <img src="images/design6.jpg" alt="Design Corporate" class="w-full h-48 object-cover rounded-lg mb-4"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-48 bg-indigo-300 rounded-lg flex items-center justify-center" style="display: none;">
+                                    <i class="fas fa-users text-indigo-500 text-4xl"></i>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-4">Corporate Sport</h3>
+                                <p class="text-sm text-gray-600">Brand identity</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Item 7 -->
+                    <div class="carousel-item">
+                        <div class="aspect-[3/4] bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center p-6">
+                            <div class="text-center">
+                                <img src="images/design7.jpg" alt="Design Fitness" class="w-full h-48 object-cover rounded-lg mb-4"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-48 bg-pink-300 rounded-lg flex items-center justify-center" style="display: none;">
+                                    <i class="fas fa-dumbbell text-pink-500 text-4xl"></i>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-4">Fitness Team</h3>
+                                <p class="text-sm text-gray-600">Energia e forza</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Item 8 -->
+                    <div class="carousel-item">
+                        <div class="aspect-[3/4] bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center p-6">
+                            <div class="text-center">
+                                <img src="images/design8.jpg" alt="Design Yoga" class="w-full h-48 object-cover rounded-lg mb-4"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="w-full h-48 bg-teal-300 rounded-lg flex items-center justify-center" style="display: none;">
+                                    <i class="fas fa-spa text-teal-500 text-4xl"></i>
+                                </div>
+                                <h3 class="font-bold text-gray-800 mt-4">Yoga Studio</h3>
+                                <p class="text-sm text-gray-600">Equilibrio e armonia</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Portfolio Item 2 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-green-100 to-green-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-running text-green-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-green-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 3 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-purple-100 to-purple-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-swimmer text-purple-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-purple-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 4 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-red-100 to-red-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-skating text-red-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-red-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 5 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-yellow-100 to-orange-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-bicycle text-orange-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-orange-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 6 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-indigo-100 to-indigo-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-users text-indigo-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-indigo-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 7 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-pink-100 to-pink-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-tshirt text-pink-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-pink-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 8 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-teal-100 to-teal-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-medal text-teal-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-teal-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 9 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-cyan-100 to-cyan-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-flag text-cyan-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-cyan-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 10 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-lime-100 to-lime-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-trophy text-lime-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-lime-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 11 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-amber-100 to-amber-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-star text-amber-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-amber-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 12 -->
-                <div class="portfolio-item bg-white rounded-lg overflow-hidden shadow-lg slide-in">
-                    <div class="bg-gradient-to-br from-rose-100 to-rose-200 aspect-[3/4] flex items-center justify-center">
-                        <div class="text-center p-4">
-                            <i class="fas fa-crown text-rose-500 text-4xl mb-2"></i>
-                            <div class="w-full h-32 bg-rose-300 rounded-lg opacity-50"></div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Navigation Buttons -->
+                <button class="carousel-nav prev" id="carousel-prev">
+                    <i class="fas fa-chevron-left text-gray-700"></i>
+                </button>
+                <button class="carousel-nav next" id="carousel-next">
+                    <i class="fas fa-chevron-right text-gray-700"></i>
+                </button>
             </div>
 
             <div class="text-center mt-12">
-                <a href="#contatti" class="btn-primary text-white px-8 py-4 rounded-full font-semibold inline-block">
+                <a href="#contatti" class="bg-purple-600 text-white px-8 py-4 rounded-full font-semibold inline-block hover:bg-purple-700 transition transform hover:scale-105">
                     Richiedi il Tuo Design Personalizzato
                 </a>
             </div>
@@ -833,5 +923,105 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('carousel-track');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            
+            // Clone items for infinite scroll
+            const originalItems = Array.from(track.children);
+            originalItems.forEach(item => {
+                const clone = item.cloneNode(true);
+                track.appendChild(clone);
+            });
+            
+            let currentPosition = 0;
+            const itemWidth = 280; // Width of each item
+            const gap = 24; // 1.5rem gap
+            const totalWidth = itemWidth + gap;
+            const totalItems = originalItems.length;
+            
+            // Continuous auto-scroll
+            let autoScrollInterval;
+            function startAutoScroll() {
+                autoScrollInterval = setInterval(function() {
+                    currentPosition += 1; // Move 1px at a time for smooth scrolling
+                    track.style.transform = `translateX(-${currentPosition}px)`;
+                    
+                    // Reset position when we've scrolled through one full set
+                    if (currentPosition >= totalItems * totalWidth) {
+                        currentPosition = 0;
+                        track.style.transition = 'none';
+                        track.style.transform = `translateX(0px)`;
+                        setTimeout(() => {
+                            track.style.transition = 'transform 0.5s ease';
+                        }, 50);
+                    }
+                }, 20); // Smooth continuous scroll (50fps)
+            }
+            
+            function stopAutoScroll() {
+                clearInterval(autoScrollInterval);
+            }
+            
+            // Manual navigation with infinite scroll logic
+            function moveCarousel(direction) {
+                stopAutoScroll();
+                const itemsToMove = 2; // Move 2 items per click
+                const moveDistance = itemsToMove * totalWidth;
+                
+                if (direction === 'next') {
+                    currentPosition += moveDistance;
+                } else {
+                    currentPosition -= moveDistance;
+                    if (currentPosition < 0) {
+                        currentPosition = totalItems * totalWidth + currentPosition;
+                    }
+                }
+                
+                track.style.transition = 'transform 0.5s ease';
+                track.style.transform = `translateX(-${currentPosition}px)`;
+                
+                // Handle infinite scroll boundaries
+                if (currentPosition >= totalItems * totalWidth) {
+                    setTimeout(() => {
+                        currentPosition = currentPosition - (totalItems * totalWidth);
+                        track.style.transition = 'none';
+                        track.style.transform = `translateX(-${currentPosition}px)`;
+                        setTimeout(() => {
+                            track.style.transition = 'transform 0.5s ease';
+                        }, 50);
+                    }, 500);
+                }
+                
+                // Resume auto-scroll after 3 seconds
+                setTimeout(startAutoScroll, 3000);
+            }
+            
+            // Navigation buttons
+            prevBtn.addEventListener('click', () => moveCarousel('prev'));
+            nextBtn.addEventListener('click', () => moveCarousel('next'));
+            
+            // Pause on hover
+            track.parentElement.addEventListener('mouseenter', stopAutoScroll);
+            track.parentElement.addEventListener('mouseleave', startAutoScroll);
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                currentPosition = 0;
+                track.style.transition = 'none';
+                track.style.transform = `translateX(0px)`;
+                setTimeout(() => {
+                    track.style.transition = 'transform 0.5s ease';
+                }, 50);
+            });
+            
+            // Initialize
+            track.style.transition = 'transform 0.5s ease';
+            startAutoScroll();
+        });
+    </script>
 </body>
 </html>

@@ -300,13 +300,21 @@
     </div>
 
     <!-- How It Works Section -->
-    <section id="come-funziona" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 slide-in">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4 section-title">
+    <section id="come-funziona" class="relative py-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/come funziona.jpg" 
+                 alt="Come Funziona Background" 
+                 class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-20 container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4 section-title drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
                     Come Funziona
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p class="text-xl text-white max-w-3xl mx-auto drop-shadow-lg" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
                     Il processo semplice per creare il tuo abbigliamento personalizzato
                 </p>
             </div>
@@ -314,7 +322,7 @@
             <!-- Steps Container -->
             <div class="relative">
                 <!-- Connection Line -->
-                <div class="absolute top-12 left-0 right-0 h-1 bg-purple-200 hidden md:block"></div>
+                <div class="absolute top-12 left-0 right-0 h-1 bg-white bg-opacity-30 hidden md:block"></div>
                 
                 <div class="grid md:grid-cols-4 gap-8 relative">
                     <!-- Step 1 -->
@@ -323,7 +331,7 @@
                         <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-10">
                             1
                         </div>
-                        <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 slide-in text-center pt-16">
+                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 text-center pt-16">
                             <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                                 <i class="fas fa-file-alt text-purple-600 text-3xl"></i>
                             </div>
@@ -340,7 +348,7 @@
                         <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-10">
                             2
                         </div>
-                        <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 slide-in text-center pt-16">
+                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 text-center pt-16">
                             <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                                 <i class="fas fa-paint-brush text-purple-600 text-3xl"></i>
                             </div>
@@ -357,13 +365,13 @@
                         <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-10">
                             3
                         </div>
-                        <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 slide-in text-center pt-16">
+                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 text-center pt-16">
                             <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                                 <i class="fas fa-check-circle text-purple-600 text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold text-gray-800 mb-3">Approvazione</h3>
                             <p class="text-gray-600 text-sm leading-relaxed">
-                                Revisiona il design e richiedi modifiche fino a quando non è perfetto
+                                Revisiona il design e richiedi modifiche fino a quando non e perfetto
                             </p>
                         </div>
                     </div>
@@ -374,7 +382,7 @@
                         <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-10">
                             4
                         </div>
-                        <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 slide-in text-center pt-16">
+                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 text-center pt-16">
                             <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                                 <i class="fas fa-truck text-purple-600 text-3xl"></i>
                             </div>
@@ -394,6 +402,69 @@
                     <div class="w-8 h-1 bg-purple-600 rounded"></div>
                     <div class="w-8 h-1 bg-purple-600 rounded"></div>
                     <div class="w-8 h-1 bg-purple-600 rounded"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="w-full flex items-center">
+        <div class="flex-1 h-px bg-gray-300"></div>
+        <div class="w-24 h-1 bg-gray-600 mx-4"></div>
+        <div class="flex-1 h-px bg-gray-300"></div>
+    </div>
+
+    <!-- Our Designs Section -->
+    <section id="i-nostri-design" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4 section-title">
+                    I Nostri Design
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Esplora alcune delle nostre creazioni uniche e personalizzate.
+                </p>
+            </div>
+
+            <div class="flex justify-center items-center flex-wrap">
+                <!-- Design Card 1 -->
+                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer group -ml-8 first:ml-0 hover:z-50">
+                    <div class="absolute inset-0 bg-orange-600 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 1</p>
+                    </div>
+                    <img src="images/divisa 1.JPG" alt="Design 1" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+
+                <!-- Design Card 2 -->
+                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer group -ml-8 hover:z-50">
+                    <div class="absolute inset-0 bg-orange-500 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 2</p>
+                    </div>
+                    <img src="images/divisa 2.JPG" alt="Design 2" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+
+                <!-- Design Card 3 -->
+                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer group -ml-8 hover:z-50">
+                    <div class="absolute inset-0 bg-amber-800 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 3</p>
+                    </div>
+                    <img src="images/divisa 3.JPG" alt="Design 3" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+
+                <!-- Design Card 4 -->
+                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer group -ml-8 hover:z-50">
+                    <div class="absolute inset-0 bg-gray-600 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 4</p>
+                    </div>
+                    <img src="images/divisa 4.JPG" alt="Design 4" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div>
+
+                <!-- Design Card 5 -->
+                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer group -ml-8 hover:z-50">
+                    <div class="absolute inset-0 bg-gray-400 flex items-center justify-center">
+                        <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 5</p>
+                    </div>
+                    <img src="images/divisa 5.JPG" alt="Design 5" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 </div>
             </div>
         </div>

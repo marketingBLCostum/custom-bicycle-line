@@ -17,6 +17,42 @@
             font-family: 'Orbitron', sans-serif;
         }
         
+        /* Sport Buttons Styles */
+        .sport-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e5e7eb;
+            background: white;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 100px;
+        }
+        
+        .sport-btn:hover {
+            border-color: #374151;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .sport-btn.active {
+            background: #1f2937;
+            border-color: #1f2937;
+            color: white;
+        }
+        
+        .sport-btn i {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .sport-btn span {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
         .hero-background {
             background-image: url('images/gemini-2.5-flash-image_falla_in_orizzontale-0.jpg');
             background-size: cover;
@@ -249,49 +285,6 @@
         </div>
     </section>
 
-    <!-- Design Options Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-gray-800 mb-4">Non la solita divisa</h2>
-            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Sii originale, decidi tu come creare le tue divise personalizzate.
-            </p>
-            <p class="text-lg text-gray-600 mb-12 max-w-4xl mx-auto">
-                Richiedi un design personalizzato, il risultato sarà eccezionale!
-            </p>
-
-            <div class="grid md:grid-cols-2 gap-10">
-                <!-- Design Personalizzato Card -->
-                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="w-full h-48 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg mb-6 flex items-center justify-center">
-                        <span class="text-gray-400 text-lg">Design Personalizzato</span>
-                    </div>
-                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Design Personalizzato</h3>
-                    <p class="text-gray-600 mb-8">
-                        Inizia a creare divise personalizzate online. Scegli un prodotto e personalizzalo come vuoi!
-                    </p>
-                    <button class="bg-black text-white px-8 py-3 text-lg font-semibold rounded-lg hover:bg-gray-800 transition duration-300">
-                        RICHIEDI
-                    </button>
-                </div>
-
-                <!-- Super Design Card -->
-                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                    <div class="w-full h-48 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg mb-6 flex items-center justify-center">
-                        <span class="text-gray-400 text-lg">Super Design</span>
-                    </div>
-                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Super Design</h3>
-                    <p class="text-gray-600 mb-8">
-                        Richiedi un design personalizzato e su misura. I nostri designer lo renderanno realtà!
-                    </p>
-                    <button class="bg-black text-white px-8 py-3 text-lg font-semibold rounded-lg hover:bg-gray-800 transition duration-300">
-                        RICHIEDI
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Section Divider -->
     <div class="w-full flex items-center">
         <div class="flex-1 h-px bg-gray-300"></div>
@@ -318,15 +311,15 @@
                     <div class="relative">
                         <div class="flex items-center">
                             <!-- Number Badge -->
-                            <div class="w-20 h-20 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg z-10">
+                            <div class="w-20 h-20 bg-gray-800 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg z-10">
                                 1
                             </div>
-                            <div class="flex-1 h-1 bg-purple-200 ml-4"></div>
+                            <div class="flex-1 h-1 bg-gray-300 ml-4"></div>
                         </div>
                         <div class="mt-4 ml-24">
                             <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center">
-                                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-6">
-                                    <i class="fas fa-file-alt text-purple-600 text-2xl"></i>
+                                <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mr-6">
+                                    <i class="fas fa-file-alt text-gray-800 text-2xl"></i>
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-gray-800 mb-3">Richiedi Preventivo</h3>
@@ -341,9 +334,9 @@
                     <!-- Step 2 - Right -->
                     <div class="relative">
                         <div class="flex items-center justify-end">
-                            <div class="flex-1 h-1 bg-purple-200 mr-4"></div>
+                            <div class="flex-1 h-1 bg-gray-300 mr-4"></div>
                             <!-- Number Badge -->
-                            <div class="w-20 h-20 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg z-10">
+                            <div class="w-20 h-20 bg-gray-800 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg z-10">
                                 2
                             </div>
                         </div>
@@ -355,8 +348,8 @@
                                         Il nostro team crea un design unico basato sui tuoi colori e logo
                                     </p>
                                 </div>
-                                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center ml-6">
-                                    <i class="fas fa-paint-brush text-purple-600 text-2xl"></i>
+                                <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center ml-6">
+                                    <i class="fas fa-paint-brush text-gray-800 text-2xl"></i>
                                 </div>
                             </div>
                         </div>
@@ -366,15 +359,15 @@
                     <div class="relative">
                         <div class="flex items-center">
                             <!-- Number Badge -->
-                            <div class="w-20 h-20 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg z-10">
+                            <div class="w-20 h-20 bg-gray-800 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg z-10">
                                 3
                             </div>
-                            <div class="flex-1 h-1 bg-purple-200 ml-4"></div>
+                            <div class="flex-1 h-1 bg-gray-300 ml-4"></div>
                         </div>
                         <div class="mt-4 ml-24">
                             <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center">
-                                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-6">
-                                    <i class="fas fa-check-circle text-purple-600 text-2xl"></i>
+                                <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mr-6">
+                                    <i class="fas fa-check-circle text-gray-800 text-2xl"></i>
                                 </div>
                                 <div>
                                     <h3 class="text-xl font-bold text-gray-800 mb-3">Approvazione</h3>
@@ -389,9 +382,9 @@
                     <!-- Step 4 - Right -->
                     <div class="relative">
                         <div class="flex items-center justify-end">
-                            <div class="flex-1 h-1 bg-purple-200 mr-4"></div>
+                            <div class="flex-1 h-1 bg-gray-300 mr-4"></div>
                             <!-- Number Badge -->
-                            <div class="w-20 h-20 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg z-10">
+                            <div class="w-20 h-20 bg-gray-800 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-lg z-10">
                                 4
                             </div>
                         </div>
@@ -403,8 +396,8 @@
                                         Produzione rapida e consegna in tutta Italia in 4-5 settimane
                                     </p>
                                 </div>
-                                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center ml-6">
-                                    <i class="fas fa-truck text-purple-600 text-2xl"></i>
+                                <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center ml-6">
+                                    <i class="fas fa-truck text-gray-800 text-2xl"></i>
                                 </div>
                             </div>
                         </div>
@@ -414,10 +407,10 @@
                 <!-- Mobile Progress Indicators -->
                 <div class="flex justify-center items-center mt-8 md:hidden">
                     <div class="flex space-x-2">
-                        <div class="w-8 h-1 bg-purple-600 rounded"></div>
-                        <div class="w-8 h-1 bg-purple-600 rounded"></div>
-                        <div class="w-8 h-1 bg-purple-600 rounded"></div>
-                        <div class="w-8 h-1 bg-purple-600 rounded"></div>
+                        <div class="w-8 h-1 bg-gray-800 rounded"></div>
+                        <div class="w-8 h-1 bg-gray-800 rounded"></div>
+                        <div class="w-8 h-1 bg-gray-800 rounded"></div>
+                        <div class="w-8 h-1 bg-gray-800 rounded"></div>
                     </div>
                 </div>
             </div>
@@ -453,21 +446,21 @@
                              alt="Ciclismo" 
                              class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                        <div class="absolute top-4 left-4 bg-purple-600 text-white rounded-full px-3 py-1">
+                        <div class="absolute top-4 left-4 bg-gray-800 text-white rounded-full px-3 py-1">
                             <span class="text-xs font-bold">PRO</span>
                         </div>
                         <!-- Icon Overlay -->
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="bg-purple-600/90 backdrop-blur-sm rounded-full p-4 transform scale-0 group-hover:scale-100 transition-transform duration-500">
+                            <div class="bg-gray-800/90 backdrop-blur-sm rounded-full p-4 transform scale-0 group-hover:scale-100 transition-transform duration-500">
                                 <i class="fas fa-bicycle text-white text-2xl"></i>
                             </div>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">Ciclismo</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-gray-800 transition-colors">Ciclismo</h3>
                         <p class="text-gray-600 text-sm mb-4">Abbigliamento tecnico aerodinamico per massime prestazioni</p>
                         <div class="flex items-center justify-between">
-                            <span class="text-purple-600 font-semibold text-sm flex items-center">
+                            <span class="text-gray-800 font-semibold text-sm flex items-center">
                                 Scopri di più
                                 <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
                             </span>
@@ -581,7 +574,7 @@
 
             <!-- Bottom CTA -->
             <div class="text-center mt-12">
-                <a href="#contatti" class="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                <a href="#contatti" class="inline-flex items-center bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
                     Contattaci per il tuo sport
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -608,125 +601,64 @@
                 </p>
             </div>
 
-            <!-- Carousel Container -->
-            <div class="carousel-container">
-                <div class="carousel-track" id="carousel-track">
-                    <!-- Design Item 1 -->
-                    <div class="carousel-item">
-                        <div class="aspect-[3/4] bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center p-6">
-                            <img src="images/divisa 1.JPG" alt="Design Ciclismo" class="w-full h-full object-cover rounded-lg" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="w-full h-full bg-blue-300 rounded-lg flex items-center justify-center" style="display: none;">
-                                <i class="fas fa-bicycle text-blue-500 text-4xl"></i>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Sport Buttons -->
+            <div class="flex justify-center space-x-4 mb-12">
+                <button class="sport-btn active" data-sport="ciclismo">
+                    <i class="fas fa-bicycle"></i>
+                    <span>Ciclismo</span>
+                </button>
+                <button class="sport-btn" data-sport="atletica">
+                    <i class="fas fa-running"></i>
+                    <span>Atletica</span>
+                </button>
+                <button class="sport-btn" data-sport="triathlon">
+                    <i class="fas fa-swimmer"></i>
+                    <span>Triathlon</span>
+                </button>
+                <button class="sport-btn" data-sport="pattinaggio">
+                    <i class="fas fa-skating"></i>
+                    <span>Pattinaggio</span>
+                </button>
+            </div>
 
-                    <!-- Design Item 2 -->
-                    <div class="carousel-item">
-                        <div class="aspect-[3/4] bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center p-6">
-                            <img src="images/divisa 2.JPG" alt="Design Atletica" class="w-full h-full object-cover rounded-lg"
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="w-full h-full bg-green-300 rounded-lg flex items-center justify-center" style="display: none;">
-                                <i class="fas fa-running text-green-500 text-4xl"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Design Item 3 -->
-                    <div class="carousel-item">
-                        <div class="aspect-[3/4] bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center p-6">
-                            <img src="images/divisa 3.JPG" alt="Design Triathlon" class="w-full h-full object-cover rounded-lg"
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="w-full h-full bg-purple-300 rounded-lg flex items-center justify-center" style="display: none;">
-                                <i class="fas fa-swimmer text-purple-500 text-4xl"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Design Item 4 -->
-                    <div class="carousel-item">
-                        <div class="aspect-[3/4] bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center p-6">
-                            <img src="images/divisa 4.JPG" alt="Design Pattinaggio" class="w-full h-full object-cover rounded-lg"
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="w-full h-full bg-red-300 rounded-lg flex items-center justify-center" style="display: none;">
-                                <i class="fas fa-skating text-red-500 text-4xl"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Design Item 5 -->
-                    <div class="carousel-item">
-                        <div class="aspect-[3/4] bg-gradient-to-br from-yellow-100 to-orange-200 flex items-center justify-center p-6">
-                            <div class="text-center">
-                                <img src="images/design5.jpg" alt="Design Custom" class="w-full h-48 object-cover rounded-lg mb-4"
-                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="w-full h-48 bg-orange-300 rounded-lg flex items-center justify-center" style="display: none;">
-                                    <i class="fas fa-tshirt text-orange-500 text-4xl"></i>
-                                </div>
-                                <h3 class="font-bold text-gray-800 mt-4">Custom Racing</h3>
-                                <p class="text-sm text-gray-600">Design esclusivo</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Design Item 6 -->
-                    <div class="carousel-item">
-                        <div class="aspect-[3/4] bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center p-6">
-                            <div class="text-center">
-                                <img src="images/design6.jpg" alt="Design Corporate" class="w-full h-48 object-cover rounded-lg mb-4"
-                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="w-full h-48 bg-indigo-300 rounded-lg flex items-center justify-center" style="display: none;">
-                                    <i class="fas fa-users text-indigo-500 text-4xl"></i>
-                                </div>
-                                <h3 class="font-bold text-gray-800 mt-4">Corporate Sport</h3>
-                                <p class="text-sm text-gray-600">Brand identity</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Design Item 7 -->
-                    <div class="carousel-item">
-                        <div class="aspect-[3/4] bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center p-6">
-                            <div class="text-center">
-                                <img src="images/design7.jpg" alt="Design Fitness" class="w-full h-48 object-cover rounded-lg mb-4"
-                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="w-full h-48 bg-pink-300 rounded-lg flex items-center justify-center" style="display: none;">
-                                    <i class="fas fa-dumbbell text-pink-500 text-4xl"></i>
-                                </div>
-                                <h3 class="font-bold text-gray-800 mt-4">Fitness Team</h3>
-                                <p class="text-sm text-gray-600">Energia e forza</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Design Item 8 -->
-                    <div class="carousel-item">
-                        <div class="aspect-[3/4] bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center p-6">
-                            <div class="text-center">
-                                <img src="images/design8.jpg" alt="Design Yoga" class="w-full h-48 object-cover rounded-lg mb-4"
-                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="w-full h-48 bg-teal-300 rounded-lg flex items-center justify-center" style="display: none;">
-                                    <i class="fas fa-spa text-teal-500 text-4xl"></i>
-                                </div>
-                                <h3 class="font-bold text-gray-800 mt-4">Yoga Studio</h3>
-                                <p class="text-sm text-gray-600">Equilibrio e armonia</p>
-                            </div>
+            <!-- Designs Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Design 1 -->
+                <div class="design-item">
+                    <div class="aspect-[3/4] bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center p-6 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                        <img src="images/divisa 1.JPG" alt="Design 1" class="w-full h-full object-cover rounded-lg" 
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full bg-blue-300 rounded-lg flex items-center justify-center" style="display: none;">
+                            <i class="fas fa-bicycle text-blue-500 text-4xl"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Navigation Buttons -->
-                <button class="carousel-nav prev" id="carousel-prev">
-                    <i class="fas fa-chevron-left text-gray-700"></i>
-                </button>
-                <button class="carousel-nav next" id="carousel-next">
-                    <i class="fas fa-chevron-right text-gray-700"></i>
-                </button>
+                <!-- Design 2 -->
+                <div class="design-item">
+                    <div class="aspect-[3/4] bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center p-6 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                        <img src="images/divisa 2.JPG" alt="Design 2" class="w-full h-full object-cover rounded-lg"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full bg-green-300 rounded-lg flex items-center justify-center" style="display: none;">
+                            <i class="fas fa-running text-green-500 text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design 3 -->
+                <div class="design-item">
+                    <div class="aspect-[3/4] bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center p-6 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+                        <img src="images/divisa 3.JPG" alt="Design 3" class="w-full h-full object-cover rounded-lg"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="w-full h-full bg-purple-300 rounded-lg flex items-center justify-center" style="display: none;">
+                            <i class="fas fa-swimmer text-purple-500 text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="text-center mt-12">
-                <a href="#contatti" class="bg-purple-600 text-white px-8 py-4 rounded-full font-semibold inline-block hover:bg-purple-700 transition transform hover:scale-105">
+                <a href="#contatti" class="bg-gray-800 text-white px-8 py-4 rounded-full font-semibold inline-block hover:bg-gray-900 transition transform hover:scale-105">
                     Richiedi il Tuo Design Personalizzato
                 </a>
             </div>
@@ -748,7 +680,7 @@
                 <div class="space-y-6">
                     <!-- Small Tag -->
                     <div class="inline-block">
-                        <span class="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-semibold">
+                        <span class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold">
                             Servizio Grafico
                         </span>
                     </div>
@@ -756,7 +688,7 @@
                     <!-- Main Title -->
                     <h2 class="text-5xl font-bold">
                         <span class="text-black">PERSONALIZZA</span><br>
-                        <span class="text-purple-600">OGNI DETTAGLIO</span>
+                        <span class="text-gray-800">OGNI DETTAGLIO</span>
                     </h2>
                     
                     <!-- Description -->
@@ -769,7 +701,7 @@
                         <!-- Left Column Features -->
                         <div class="space-y-4">
                             <div class="flex items-start space-x-3">
-                                <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                     <i class="fas fa-check text-white text-xs"></i>
                                 </div>
                                 <div>
@@ -779,7 +711,7 @@
                             </div>
                             
                             <div class="flex items-start space-x-3">
-                                <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                     <i class="fas fa-check text-white text-xs"></i>
                                 </div>
                                 <div>
@@ -789,7 +721,7 @@
                             </div>
                             
                             <div class="flex items-start space-x-3">
-                                <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                     <i class="fas fa-check text-white text-xs"></i>
                                 </div>
                                 <div>
@@ -802,7 +734,7 @@
                         <!-- Right Column Features -->
                         <div class="space-y-4">
                             <div class="flex items-start space-x-3">
-                                <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                     <i class="fas fa-check text-white text-xs"></i>
                                 </div>
                                 <div>
@@ -812,7 +744,7 @@
                             </div>
                             
                             <div class="flex items-start space-x-3">
-                                <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                     <i class="fas fa-check text-white text-xs"></i>
                                 </div>
                                 <div>
@@ -822,7 +754,7 @@
                             </div>
                             
                             <div class="flex items-start space-x-3">
-                                <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                     <i class="fas fa-check text-white text-xs"></i>
                                 </div>
                                 <div>
@@ -835,7 +767,7 @@
                     
                     <!-- CTA Button -->
                     <div class="pt-4">
-                        <button class="bg-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-700 transition transform hover:scale-105 shadow-lg">
+                        <button class="bg-gray-800 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-900 transition transform hover:scale-105 shadow-lg">
                             Inizia a Personalizzare →
                         </button>
                     </div>
@@ -845,7 +777,7 @@
                 <div class="relative bg-gray-100 rounded-3xl p-8 min-h-[600px] flex items-center justify-center">
                     <!-- Top Right Tag -->
                     <div class="absolute top-6 right-6">
-                        <div class="bg-purple-600 text-white px-4 py-2 rounded-full text-center">
+                        <div class="bg-gray-800 text-white px-4 py-2 rounded-full text-center">
                             <div class="text-2xl font-bold">100%</div>
                             <div class="text-xs">Personalizzabile</div>
                         </div>
@@ -903,7 +835,7 @@
                         <!-- Contact Information -->
                         <div class="space-y-6">
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                                     <i class="fas fa-envelope text-white"></i>
                                 </div>
                                 <div>
@@ -913,7 +845,7 @@
                             </div>
 
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                                     <i class="fas fa-phone text-white"></i>
                                 </div>
                                 <div>
@@ -923,7 +855,7 @@
                             </div>
 
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0">
                                     <i class="fas fa-map-marker-alt text-white"></i>
                                 </div>
                                 <div>
@@ -987,7 +919,7 @@
                             </div>
 
                             <button type="submit" 
-                                    class="w-full bg-purple-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition">
+                                    class="w-full bg-gray-800 text-white py-4 rounded-lg font-semibold text-lg hover:bg-gray-900 transition">
                                 Invia Richiesta
                             </button>
                         </form>
@@ -1028,7 +960,7 @@
                         <h3 class="text-lg font-semibold text-gray-800">
                             Quanto tempo ci vuole per ricevere le divise personalizzate?
                         </h3>
-                        <i class="fas fa-chevron-down text-purple-600 transform transition-transform duration-300 faq-icon"></i>
+                        <i class="fas fa-chevron-down text-gray-800 transform transition-transform duration-300 faq-icon"></i>
                     </button>
                     <div class="hidden p-6 bg-white rounded-lg mt-2 border border-gray-200 faq-content">
                         <p class="text-gray-600">
@@ -1043,7 +975,7 @@
                         <h3 class="text-lg font-semibold text-gray-800">
                             Qual è il numero minimo di pezzi per un ordine?
                         </h3>
-                        <i class="fas fa-chevron-down text-purple-600 transform transition-transform duration-300 faq-icon"></i>
+                        <i class="fas fa-chevron-down text-gray-800 transform transition-transform duration-300 faq-icon"></i>
                     </button>
                     <div class="hidden p-6 bg-white rounded-lg mt-2 border border-gray-200 faq-content">
                         <p class="text-gray-600">
@@ -1058,7 +990,7 @@
                         <h3 class="text-lg font-semibold text-gray-800">
                             Possiamo modificare il design dopo averlo approvato?
                         </h3>
-                        <i class="fas fa-chevron-down text-purple-600 transform transition-transform duration-300 faq-icon"></i>
+                        <i class="fas fa-chevron-down text-gray-800 transform transition-transform duration-300 faq-icon"></i>
                     </button>
                     <div class="hidden p-6 bg-white rounded-lg mt-2 border border-gray-200 faq-content">
                         <p class="text-gray-600">
@@ -1073,7 +1005,7 @@
                         <h3 class="text-lg font-semibold text-gray-800">
                             Quali materiali utilizzate per le divise?
                         </h3>
-                        <i class="fas fa-chevron-down text-purple-600 transform transition-transform duration-300 faq-icon"></i>
+                        <i class="fas fa-chevron-down text-gray-800 transform transition-transform duration-300 faq-icon"></i>
                     </button>
                     <div class="hidden p-6 bg-white rounded-lg mt-2 border border-gray-200 faq-content">
                         <p class="text-gray-600">
@@ -1088,7 +1020,7 @@
                         <h3 class="text-lg font-semibold text-gray-800">
                             Offrite sconti per ordini di grandi quantità?
                         </h3>
-                        <i class="fas fa-chevron-down text-purple-600 transform transition-transform duration-300 faq-icon"></i>
+                        <i class="fas fa-chevron-down text-gray-800 transform transition-transform duration-300 faq-icon"></i>
                     </button>
                     <div class="hidden p-6 bg-white rounded-lg mt-2 border border-gray-200 faq-content">
                         <p class="text-gray-600">
@@ -1103,7 +1035,7 @@
                 <p class="text-gray-600 mb-4">
                     Non hai trovato la risposta che cercavi?
                 </p>
-                <a href="#contatti" class="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold inline-block hover:bg-purple-700 transition transform hover:scale-105">
+                <a href="#contatti" class="bg-gray-800 text-white px-8 py-3 rounded-full font-semibold inline-block hover:bg-gray-900 transition transform hover:scale-105">
                     Contattaci
                 </a>
             </div>
@@ -1192,7 +1124,7 @@
                         <p class="text-gray-600">Scopri cosa dicono di noi i nostri clienti</p>
                     </div>
                     <div class="flex space-x-4">
-                        <a href="https://www.feedaty.com/recensioni/bicycle-line" target="_blank" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        <a href="https://www.feedaty.com/recensioni/bicycle-line" target="_blank" class="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition">
                             SCRIVI UNA RECENSIONE
                         </a>
                     </div>
@@ -1214,10 +1146,10 @@
                 <div class="col-span-1">
                     <h3 class="font-bold text-gray-800 mb-3">BICYCLE LINE</h3>
                     <ul class="space-y-1">
-                        <li><a href="https://www.bicycle-line.com/it/content/4-brand" class="hover:text-purple-600 transition">Brand</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/6-storia" class="hover:text-purple-600 transition">Storia</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/9-sostenibilita" class="hover:text-purple-600 transition">Sostenibilità</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/contact" class="hover:text-purple-600 transition">Contattaci</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/4-brand" class="hover:text-gray-800 transition">Brand</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/6-storia" class="hover:text-gray-800 transition">Storia</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/9-sostenibilita" class="hover:text-gray-800 transition">Sostenibilità</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/contact" class="hover:text-gray-800 transition">Contattaci</a></li>
                     </ul>
                 </div>
 
@@ -1225,11 +1157,11 @@
                 <div class="col-span-1">
                     <h3 class="font-bold text-gray-800 mb-3">SHOP</h3>
                     <ul class="space-y-1">
-                        <li><a href="https://www.bicycle-line.com/it/947-uomo" class="hover:text-purple-600 transition">Uomo</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/948-donna" class="hover:text-purple-600 transition">Donna</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/949-cat-bambino" class="hover:text-purple-600 transition">Bambino</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/1109-offerte" class="hover:text-purple-600 transition">Offerte</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/23-shop" class="hover:text-purple-600 transition">Guida allo shopping online</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/947-uomo" class="hover:text-gray-800 transition">Uomo</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/948-donna" class="hover:text-gray-800 transition">Donna</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/949-cat-bambino" class="hover:text-gray-800 transition">Bambino</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/1109-offerte" class="hover:text-gray-800 transition">Offerte</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/23-shop" class="hover:text-gray-800 transition">Guida allo shopping online</a></li>
                     </ul>
                 </div>
 
@@ -1237,12 +1169,12 @@
                 <div class="col-span-1">
                     <h3 class="font-bold text-gray-800 mb-3">LINK UTILI</h3>
                     <ul class="space-y-1">
-                        <li><a href="https://www.bicycle-line.com/it/content/1-spedizione" class="hover:text-purple-600 transition">Spedizione</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/5-pagamento" class="hover:text-purple-600 transition">Pagamento</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/18-faq" class="hover:text-purple-600 transition">FAQ</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/12-guida-alle-taglie" class="hover:text-purple-600 transition">Guida alle taglie</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/14-garanzia" class="hover:text-purple-600 transition">Utilizzo del prodotto e garanzia</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/13-resi" class="hover:text-purple-600 transition">Resi</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/1-spedizione" class="hover:text-gray-800 transition">Spedizione</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/5-pagamento" class="hover:text-gray-800 transition">Pagamento</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/18-faq" class="hover:text-gray-800 transition">FAQ</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/12-guida-alle-taglie" class="hover:text-gray-800 transition">Guida alle taglie</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/14-garanzia" class="hover:text-gray-800 transition">Utilizzo del prodotto e garanzia</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/13-resi" class="hover:text-gray-800 transition">Resi</a></li>
                     </ul>
                 </div>
 
@@ -1250,9 +1182,9 @@
                 <div class="col-span-1">
                     <h3 class="font-bold text-gray-800 mb-3">NOTE LEGALI</h3>
                     <ul class="space-y-1">
-                        <li><a href="https://www.bicycle-line.com/it/content/15-privacy-policy" class="hover:text-purple-600 transition">Privacy Policy</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/16-cookie-policy" class="hover:text-purple-600 transition">Cookie policy</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/17-termini-e-condizioni" class="hover:text-purple-600 transition">Termini e condizioni</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/15-privacy-policy" class="hover:text-gray-800 transition">Privacy Policy</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/16-cookie-policy" class="hover:text-gray-800 transition">Cookie policy</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/17-termini-e-condizioni" class="hover:text-gray-800 transition">Termini e condizioni</a></li>
                     </ul>
 
                     <h3 class="font-bold text-gray-800 mb-3 mt-4">CONTACT US</h3>
@@ -1274,133 +1206,97 @@
 
     <script src="script.js"></script>
     <script>
-        // Carousel functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const track = document.getElementById('carousel-track');
-            const prevBtn = document.getElementById('carousel-prev');
-            const nextBtn = document.getElementById('carousel-next');
-            
-            // Clone items for infinite scroll
-            const originalItems = Array.from(track.children);
-            originalItems.forEach(item => {
-                const clone = item.cloneNode(true);
-                track.appendChild(clone);
-            });
-            
-            let currentPosition = 0;
-            const itemWidth = 280; // Width of each item
-            const gap = 24; // 1.5rem gap
-            const totalWidth = itemWidth + gap;
-
-            // FAQ Accordion functionality
-            const faqToggles = document.querySelectorAll('.faq-toggle');
-            
-            faqToggles.forEach(toggle => {
-                toggle.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    const icon = this.querySelector('.faq-icon');
-                    const isOpen = !content.classList.contains('hidden');
-                    
-                    // Close all other FAQ items
-                    faqToggles.forEach(otherToggle => {
-                        if (otherToggle !== toggle) {
-                            const otherContent = otherToggle.nextElementSibling;
-                            const otherIcon = otherToggle.querySelector('.faq-icon');
-                            otherContent.classList.add('hidden');
-                            otherIcon.classList.remove('rotate-180');
-                        }
-                    });
-                    
-                    // Toggle current FAQ item
-                    if (isOpen) {
-                        content.classList.add('hidden');
-                        icon.classList.remove('rotate-180');
-                    } else {
-                        content.classList.remove('hidden');
-                        icon.classList.add('rotate-180');
+        // Sport Buttons functionality
+        const sportBtns = document.querySelectorAll('.sport-btn');
+        const designItems = document.querySelectorAll('.design-item');
+        
+        // Sport data with different designs for each sport
+        const sportDesigns = {
+            ciclismo: [
+                { image: 'images/divisa 1.JPG', color: 'blue', icon: 'bicycle' },
+                { image: 'images/divisa 2.JPG', color: 'green', icon: 'bicycle' },
+                { image: 'images/divisa 3.JPG', color: 'purple', icon: 'bicycle' }
+            ],
+            atletica: [
+                { image: 'images/divisa 4.JPG', color: 'red', icon: 'running' },
+                { image: 'images/divisa 1.JPG', color: 'orange', icon: 'running' },
+                { image: 'images/divisa 2.JPG', color: 'yellow', icon: 'running' }
+            ],
+            triathlon: [
+                { image: 'images/divisa 3.JPG', color: 'teal', icon: 'swimmer' },
+                { image: 'images/divisa 4.JPG', color: 'cyan', icon: 'swimmer' },
+                { image: 'images/divisa 1.JPG', color: 'indigo', icon: 'swimmer' }
+            ],
+            pattinaggio: [
+                { image: 'images/divisa 2.JPG', color: 'pink', icon: 'skating' },
+                { image: 'images/divisa 3.JPG', color: 'rose', icon: 'skating' },
+                { image: 'images/divisa 4.JPG', color: 'fuchsia', icon: 'skating' }
+            ]
+        };
+        
+        sportBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                sportBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get selected sport
+                const selectedSport = this.dataset.sport;
+                const designs = sportDesigns[selectedSport];
+                
+                // Update design items
+                designItems.forEach((item, index) => {
+                    if (designs[index]) {
+                        const design = designs[index];
+                        const container = item.querySelector('div');
+                        const img = item.querySelector('img');
+                        const fallback = item.querySelector('div > div');
+                        
+                        // Update colors
+                        container.className = `aspect-[3/4] bg-gradient-to-br from-${design.color}-100 to-${design.color}-200 flex items-center justify-center p-6 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300`;
+                        
+                        // Update image
+                        img.src = design.image;
+                        img.style.display = 'block';
+                        
+                        // Update fallback
+                        fallback.className = `w-full h-full bg-${design.color}-300 rounded-lg flex items-center justify-center`;
+                        fallback.style.display = 'none';
+                        fallback.innerHTML = `<i class="fas fa-${design.icon} text-${design.color}-500 text-4xl"></i>`;
                     }
                 });
             });
-            const totalItems = originalItems.length;
-            
-            // Continuous auto-scroll
-            let autoScrollInterval;
-            function startAutoScroll() {
-                autoScrollInterval = setInterval(function() {
-                    currentPosition += 1; // Move 1px at a time for smooth scrolling
-                    track.style.transform = `translateX(-${currentPosition}px)`;
-                    
-                    // Reset position when we've scrolled through one full set
-                    if (currentPosition >= totalItems * totalWidth) {
-                        currentPosition = 0;
-                        track.style.transition = 'none';
-                        track.style.transform = `translateX(0px)`;
-                        setTimeout(() => {
-                            track.style.transition = 'transform 0.5s ease';
-                        }, 50);
-                    }
-                }, 20); // Smooth continuous scroll (50fps)
-            }
-            
-            function stopAutoScroll() {
-                clearInterval(autoScrollInterval);
-            }
-            
-            // Manual navigation with infinite scroll logic
-            function moveCarousel(direction) {
-                stopAutoScroll();
-                const itemsToMove = 2; // Move 2 items per click
-                const moveDistance = itemsToMove * totalWidth;
+        });
+
+        // FAQ Accordion functionality
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('.faq-icon');
+                const isOpen = !content.classList.contains('hidden');
                 
-                if (direction === 'next') {
-                    currentPosition += moveDistance;
+                // Close all other FAQ items
+                faqToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        const otherContent = otherToggle.nextElementSibling;
+                        const otherIcon = otherToggle.querySelector('.faq-icon');
+                        otherContent.classList.add('hidden');
+                        otherIcon.classList.remove('rotate-180');
+                    }
+                });
+                
+                // Toggle current FAQ item
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    icon.classList.remove('rotate-180');
                 } else {
-                    currentPosition -= moveDistance;
-                    if (currentPosition < 0) {
-                        currentPosition = totalItems * totalWidth + currentPosition;
-                    }
+                    content.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
                 }
-                
-                track.style.transition = 'transform 0.5s ease';
-                track.style.transform = `translateX(-${currentPosition}px)`;
-                
-                // Handle infinite scroll boundaries
-                if (currentPosition >= totalItems * totalWidth) {
-                    setTimeout(() => {
-                        currentPosition = currentPosition - (totalItems * totalWidth);
-                        track.style.transition = 'none';
-                        track.style.transform = `translateX(-${currentPosition}px)`;
-                        setTimeout(() => {
-                            track.style.transition = 'transform 0.5s ease';
-                        }, 50);
-                    }, 500);
-                }
-                
-                // Resume auto-scroll after 3 seconds
-                setTimeout(startAutoScroll, 3000);
-            }
-            
-            // Navigation buttons
-            prevBtn.addEventListener('click', () => moveCarousel('prev'));
-            nextBtn.addEventListener('click', () => moveCarousel('next'));
-            
-            // Pause on hover
-            track.parentElement.addEventListener('mouseenter', stopAutoScroll);
-            track.parentElement.addEventListener('mouseleave', startAutoScroll);
-            
-            // Handle window resize
-            window.addEventListener('resize', function() {
-                currentPosition = 0;
-                track.style.transition = 'none';
-                track.style.transform = `translateX(0px)`;
-                setTimeout(() => {
-                    track.style.transition = 'transform 0.5s ease';
-                }, 50);
             });
-            
-            // Initialize
-            track.style.transition = 'transform 0.5s ease';
-            startAutoScroll();
         });
     </script>
 </body>

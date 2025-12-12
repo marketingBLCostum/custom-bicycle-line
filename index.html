@@ -415,57 +415,101 @@
     </div>
 
     <!-- Our Designs Section -->
-    <section id="i-nostri-design" class="py-20 bg-black">
-        <div class="container mx-auto px-6">
+    <section id="i-nostri-design" class="py-20 bg-black relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-orange-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4 section-title">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 section-title">
                     I Nostri Design
                 </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                     Esplora alcune delle nostre creazioni uniche e personalizzate.
                 </p>
+                <div class="flex justify-center items-center space-x-4 text-gray-400">
+                    <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+                    <span class="text-sm uppercase tracking-wider">Hover per scoprire</span>
+                    <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-gray-400 to-transparent"></div>
+                </div>
             </div>
 
-            <div class="flex justify-center items-center flex-wrap">
+            <div class="flex justify-center items-center flex-wrap relative">
                 <!-- Design Card 1 -->
-                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer group -ml-8 first:ml-0 hover:z-50">
-                    <div class="absolute inset-0 bg-orange-600 flex items-center justify-center">
-                        <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 1</p>
+                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-125 cursor-pointer group -ml-8 first:ml-0 hover:z-50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white text-2xl font-bold">01</span>
+                            </div>
+                            <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 1</p>
+                        </div>
                     </div>
-                    <img src="images/divisa 1.JPG" alt="Design 1" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <img src="images/divisa 1.JPG" alt="Design 1" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110">
                 </div>
 
                 <!-- Design Card 2 -->
-                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer group -ml-8 hover:z-50">
-                    <div class="absolute inset-0 bg-orange-500 flex items-center justify-center">
-                        <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 2</p>
+                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-125 cursor-pointer group -ml-8 hover:z-50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white text-2xl font-bold">02</span>
+                            </div>
+                            <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 2</p>
+                        </div>
                     </div>
-                    <img src="images/divisa 2.JPG" alt="Design 2" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <img src="images/divisa 2.JPG" alt="Design 2" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110">
                 </div>
 
                 <!-- Design Card 3 -->
-                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer group -ml-8 hover:z-50">
-                    <div class="absolute inset-0 bg-amber-800 flex items-center justify-center">
-                        <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 3</p>
+                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-125 cursor-pointer group -ml-8 hover:z-50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white text-2xl font-bold">03</span>
+                            </div>
+                            <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 3</p>
+                        </div>
                     </div>
-                    <img src="images/divisa 3.JPG" alt="Design 3" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <img src="images/divisa 3.JPG" alt="Design 3" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110">
                 </div>
 
                 <!-- Design Card 4 -->
-                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer group -ml-8 hover:z-50">
-                    <div class="absolute inset-0 bg-gray-600 flex items-center justify-center">
-                        <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 4</p>
+                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-125 cursor-pointer group -ml-8 hover:z-50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white text-2xl font-bold">04</span>
+                            </div>
+                            <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 4</p>
+                        </div>
                     </div>
-                    <img src="images/divisa 4.JPG" alt="Design 4" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <img src="images/divisa 4.JPG" alt="Design 4" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110">
                 </div>
 
                 <!-- Design Card 5 -->
-                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 cursor-pointer group -ml-8 hover:z-50">
-                    <div class="absolute inset-0 bg-gray-400 flex items-center justify-center">
-                        <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 5</p>
+                <div class="relative w-48 h-80 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-125 cursor-pointer group -ml-8 hover:z-50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white text-2xl font-bold">05</span>
+                            </div>
+                            <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Design 5</p>
+                        </div>
                     </div>
-                    <img src="images/divisa 5.JPG" alt="Design 5" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <img src="images/divisa 5.JPG" alt="Design 5" class="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110">
                 </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+                <button class="bg-gradient-to-r from-orange-500 to-orange-700 text-white px-8 py-4 text-lg font-semibold rounded-full hover:from-orange-600 hover:to-orange-800 transform transition-all duration-300 hover:scale-105 shadow-xl">
+                    Scopri Tutti i Design
+                </button>
             </div>
         </div>
     </section>

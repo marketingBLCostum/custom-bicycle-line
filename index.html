@@ -199,32 +199,63 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-black shadow-lg z-50">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-lg z-50 border-b border-gray-100">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <img src="images/logo.png" alt="Bicycle Line Logo" class="w-8 h-auto">
+                <!-- Left side - Navigation links -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="px-4 py-2 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-home">Home</a>
+                    <a href="#portfolio" class="px-4 py-2 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-inspiration">Prendi Ispirazione</a>
+                    <a href="#sport" class="px-4 py-2 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-create">Crea la tua Divisa</a>
+                    <a href="#personalizza" class="px-4 py-2 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-customize">Personalizza</a>
+                    <a href="#contatti" class="px-4 py-2 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-contact">Contatti</a>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-white hover:text-purple-400 transition">Home</a>
-                    <a href="#sport" class="text-white hover:text-purple-400 transition">Sport</a>
-                    <a href="#portfolio" class="text-white hover:text-purple-400 transition">Portfolio</a>
-                    <a href="#personalizza" class="text-white hover:text-purple-400 transition">Personalizza</a>
-                    <a href="#contatti" class="text-white hover:text-purple-400 transition">Contatti</a>
+                
+                <!-- Center - Logo -->
+                <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <img src="images/logo.png" alt="Bicycle Line Logo" class="w-10 h-auto">
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-white">
+                
+                <!-- Right side - Language selector -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <div class="relative">
+                        <button id="language-dropdown-btn" class="flex items-center space-x-1 text-gray-700 hover:text-black transition-colors duration-200">
+                            <span class="underline underline-offset-4 decoration-2">Italiano</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible transition-all duration-200 z-50">
+                            <button class="language-option w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors" data-lang="it">Italiano</button>
+                            <button class="language-option w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors" data-lang="en">English</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-900">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-black border-t">
-            <div class="px-6 py-4 space-y-3">
-                <a href="#home" class="block text-white hover:text-purple-400 transition">Home</a>
-                <a href="#sport" class="block text-white hover:text-purple-400 transition">Sport</a>
-                <a href="#portfolio" class="block text-white hover:text-purple-400 transition">Portfolio</a>
-                <a href="#personalizza" class="block text-white hover:text-purple-400 transition">Personalizza</a>
-                <a href="#contatti" class="block text-white hover:text-purple-400 transition">Contatti</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-6 py-4 space-y-2">
+                <a href="#home" class="block px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-home">Home</a>
+                <a href="#portfolio" class="block px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-inspiration">Prendi Ispirazione</a>
+                <a href="#sport" class="block px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-create">Crea la tua Divisa</a>
+                <a href="#personalizza" class="block px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-customize">Personalizza</a>
+                <a href="#contatti" class="block px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-contact">Contatti</a>
+                <div class="pt-4 border-t border-gray-200">
+                    <div class="relative">
+                        <button id="mobile-language-dropdown-btn" class="flex items-center space-x-1 text-gray-700 hover:text-black transition-colors duration-200 w-full">
+                            <span class="underline underline-offset-4 decoration-2">Italiano</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="mobile-language-dropdown" class="absolute left-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible transition-all duration-200 z-50">
+                            <button class="mobile-language-option w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors" data-lang="it">Italiano</button>
+                            <button class="mobile-language-option w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors" data-lang="en">English</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -244,12 +275,13 @@
                 <!-- Left Content -->
                 <div class="text-white">
                     <h1 class="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5);">
-                        Personalizza il tuo<br>kit sportivo
+                        <span data-lang="hero-title-1"></span>Personalizza il tuo</span><br>
+                        <span data-lang="hero-title-2">kit sportivo</span>
                     </h1>
-                    <p class="text-xl md:text-2xl mb-4 drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5);">
+                    <p class="text-xl md:text-2xl mb-4 drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5);" data-lang="hero-subtitle-1">
                         Alza il livello del tuo abbigliamento sportivo!
                     </p>
-                    <p class="text-lg md:text-xl mb-8 opacity-90 drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5);">
+                    <p class="text-lg md:text-xl mb-8 opacity-90 drop-shadow-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5);" data-lang="hero-subtitle-2">
                         Crea divise personalizzate per te o per il tuo team in pochi click.
                     </p>
                 </div>
@@ -262,10 +294,10 @@
     <section id="come-funziona" class="py-20 bg-black">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4 section-title">
+                <h2 class="text-4xl font-bold text-white mb-4 section-title" data-lang="how-it-works-title">
                     Come Funziona
                 </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-lang="how-it-works-subtitle">
                     Il processo semplice per creare il tuo abbigliamento personalizzato
                 </p>
             </div>
@@ -275,10 +307,10 @@
                 <!-- Step 1 -->
                 <div class="text-center">
                     <div class="mb-4">
-                        <span class="text-white text-lg font-semibold">Step 1.</span>
+                        <span class="text-white text-lg font-semibold" data-lang="step-1-label">Step 1.</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Lasciati ispirare</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
+                    <h3 class="text-2xl font-bold text-white mb-4" data-lang="step-1-title">Lasciati ispirare</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-lang="step-1-desc">
                         Colori vivaci o tonalità più scure? Pattern moderni o gradienti fluidi? Logo sponsor o design semplice? Scopri come potrebbe essere il kit dei tuoi sogni.
                     </p>
                 </div>
@@ -286,7 +318,7 @@
                 <!-- Step 2 -->
                 <div class="text-center">
                     <div class="mb-4">
-                        <span class="text-white text-lg font-semibold">Step 2.</span>
+                        <span class="text-white text-lg font-semibold" data-lang="step-2-label">Step 2.</span>
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-4">Scegli i tuoi articoli</h3>
                     <p class="text-gray-300 text-sm leading-relaxed">
@@ -297,21 +329,21 @@
                 <!-- Step 3 -->
                 <div class="text-center">
                     <div class="mb-4">
-                        <span class="text-white text-lg font-semibold">Step 3.</span>
+                        <span class="text-white text-lg font-semibold" data-lang="step-3-label">Step 3.</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Crea il tuo design</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        In collaborazione con uno dei nostri designer esperti, creerai un design di kit basato sulla tua ispirazione.
+                    <h3 class="text-2xl font-bold text-white mb-4" data-lang="step-2-title">Invia la tua richiesta</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-lang="step-2-desc">
+                        Compila il modulo con i dettagli della tua squadra e le tue preferenze. Più informazioni ci fornisci, più il design sarà perfetto per te.
                     </p>
                 </div>
 
                 <!-- Step 4 -->
                 <div class="text-center">
                     <div class="mb-4">
-                        <span class="text-white text-lg font-semibold">Step 4.</span>
+                        <span class="text-white text-lg font-semibold" data-lang="step-4-label">Step 4.</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Avvia la produzione</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
+                    <h3 class="text-2xl font-bold text-white mb-4" data-lang="step-4-title">Avvia la produzione</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-lang="step-4-desc">
                         È il momento di trasformare il tuo design in tessuto. Sviluppati nelle nostre fabbriche, possiamo gestire attentamente taglie, colori e finiture dei tuoi capi.
                     </p>
                 </div>
@@ -1122,6 +1154,148 @@
                     content.classList.remove('hidden');
                     icon.classList.add('rotate-180');
                 }
+            });
+        });
+    </script>
+<script>
+        // Translation data
+        const translations = {
+            it: {
+                'nav-home': 'Home',
+                'nav-inspiration': 'Prendi Ispirazione',
+                'nav-create': 'Crea la tua Divisa',
+                'nav-customize': 'Personalizza',
+                'nav-contact': 'Contatti',
+                'hero-title-1': 'Personalizza il tuo',
+                'hero-title-2': 'kit sportivo',
+                'hero-subtitle-1': 'Alza il livello del tuo abbigliamento sportivo!',
+                'hero-subtitle-2': 'Crea divise personalizzate per te o per il tuo team in pochi click.',
+                'how-it-works-title': 'Come Funziona',
+                'how-it-works-subtitle': 'Il processo semplice per creare il tuo abbigliamento personalizzato',
+                'step-1-label': 'Step 1.',
+                'step-1-title': 'Lasciati ispirare',
+                'step-1-desc': 'Colori vivaci o tonalità più scure? Pattern moderni o gradienti fluidi? Logo sponsor o design semplice? Scopri come potrebbe essere il kit dei tuoi sogni.',
+                'step-2-label': 'Step 2.',
+                'step-2-title': 'Invia la tua richiesta',
+                'step-2-desc': 'Compila il modulo con i dettagli della tua squadra e le tue preferenze. Più informazioni ci fornisci, più il design sarà perfetto per te.',
+                'step-3-label': 'Step 3.',
+                'step-3-title': 'Ricevi il design',
+                'step-3-desc': 'I nostri grafici creano bozze personalizzate basate sulle tue indicazioni. Riceverai proposte dettagliate da revisionare e approvare.',
+                'step-4-label': 'Step 4.',
+                'step-4-title': 'Avvia la produzione',
+                'step-4-desc': 'È il momento di trasformare il tuo design in tessuto. Sviluppati nelle nostre fabbriche, possiamo gestire attentamente taglie, colori e finiture dei tuoi capi.'
+            },
+            en: {
+                'nav-home': 'Home',
+                'nav-inspiration': 'Get Inspired',
+                'nav-create': 'Create Your Kit',
+                'nav-customize': 'Customize',
+                'nav-contact': 'Contact',
+                'hero-title-1': 'Customize your',
+                'hero-title-2': 'sports kit',
+                'hero-subtitle-1': 'Level up your sports apparel!',
+                'hero-subtitle-2': 'Create custom jerseys for you or your team in just a few clicks.',
+                'how-it-works-title': 'How It Works',
+                'how-it-works-subtitle': 'The simple process to create your personalized sportswear',
+                'step-1-label': 'Step 1.',
+                'step-1-title': 'Get Inspired',
+                'step-1-desc': 'Bright colors or darker shades? Modern patterns or fluid gradients? Sponsor logo or simple design? Discover what your dream kit could look like.',
+                'step-2-label': 'Step 2.',
+                'step-2-title': 'Send Your Request',
+                'step-2-desc': 'Fill out the form with your team details and preferences. The more information you provide, the more perfect the design will be for you.',
+                'step-3-label': 'Step 3.',
+                'step-3-title': 'Receive Your Design',
+                'step-3-desc': 'Our graphic designers create personalized mockups based on your instructions. You will receive detailed proposals to review and approve.',
+                'step-4-label': 'Step 4.',
+                'step-4-title': 'Start Production',
+                'step-4-desc': 'It\'s time to transform your design into fabric. Developed in our factories, we can carefully manage the sizes, colors and finishes of your garments.'
+            }
+        };
+
+        // Language switching function
+        function switchLanguage(lang) {
+            // Update all elements with data-lang attributes
+            document.querySelectorAll('[data-lang]').forEach(element => {
+                const key = element.getAttribute('data-lang');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update dropdown button text
+            const buttonText = lang === 'it' ? 'Italiano' : 'English';
+            document.querySelector('#language-dropdown-btn span').textContent = buttonText;
+            document.querySelector('#mobile-language-dropdown-btn span').textContent = buttonText;
+
+            // Save preference to localStorage
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Dropdown toggle functions
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            const isVisible = !dropdown.classList.contains('opacity-0');
+            
+            if (isVisible) {
+                dropdown.classList.add('opacity-0', 'invisible');
+                dropdown.classList.remove('opacity-100', 'visible');
+            } else {
+                dropdown.classList.remove('opacity-0', 'invisible');
+                dropdown.classList.add('opacity-100', 'visible');
+            }
+        }
+
+        // Close all dropdowns
+        function closeAllDropdowns() {
+            document.getElementById('language-dropdown').classList.add('opacity-0', 'invisible');
+            document.getElementById('language-dropdown').classList.remove('opacity-100', 'visible');
+            document.getElementById('mobile-language-dropdown').classList.add('opacity-0', 'invisible');
+            document.getElementById('mobile-language-dropdown').classList.remove('opacity-100', 'visible');
+        }
+
+        // Initialize language from localStorage or default to Italian
+        function initializeLanguage() {
+            const savedLang = localStorage.getItem('selectedLanguage') || 'it';
+            switchLanguage(savedLang);
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize language
+            initializeLanguage();
+
+            // Desktop dropdown
+            document.getElementById('language-dropdown-btn').addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleDropdown('language-dropdown');
+            });
+
+            // Mobile dropdown
+            document.getElementById('mobile-language-dropdown-btn').addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleDropdown('mobile-language-dropdown');
+            });
+
+            // Language options
+            document.querySelectorAll('.language-option').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const lang = e.target.getAttribute('data-lang');
+                    switchLanguage(lang);
+                    closeAllDropdowns();
+                });
+            });
+
+            document.querySelectorAll('.mobile-language-option').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const lang = e.target.getAttribute('data-lang');
+                    switchLanguage(lang);
+                    closeAllDropdowns();
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', () => {
+                closeAllDropdowns();
             });
         });
     </script>

@@ -437,136 +437,96 @@
                 </p>
             </div>
 
-            <!-- Sports Grid with Hover Effects -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Ciclismo -->
-                <div class="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="relative h-56 overflow-hidden">
+            <!-- Sports Grid - Vertical Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 max-w-full">
+                <!-- Ciclismo Custom Works -->
+                <div class="relative group cursor-pointer overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <div class="relative h-[calc(100vh-100px)] overflow-hidden">
                         <img src="images/CICLISMO.jpg" 
-                             alt="Ciclismo" 
+                             alt="Ciclismo Custom Works" 
                              class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                        <div class="absolute top-4 left-4 bg-gray-800 text-white rounded-full px-3 py-1">
-                            <span class="text-xs font-bold">PRO</span>
-                        </div>
-                        <!-- Icon Overlay -->
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="bg-gray-800/90 backdrop-blur-sm rounded-full p-4 transform scale-0 group-hover:scale-100 transition-transform duration-500">
-                                <i class="fas fa-bicycle text-white text-2xl"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-gray-800 transition-colors">Ciclismo</h3>
-                        <p class="text-gray-600 text-sm mb-4">Abbigliamento tecnico aerodinamico per massime prestazioni</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-800 font-semibold text-sm flex items-center">
-                                Scopri di più
-                                <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
-                            </span>
-                            <div class="flex items-center space-x-1">
-                                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                <span class="text-gray-500 text-xs">4.9</span>
-                            </div>
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <!-- Content Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white text-center">
+                            <h3 class="text-4xl font-bold mb-4">Ciclismo<br>Custom Works</h3>
+                            
+                            <!-- Vedi Catalogo Button -->
+                            <button class="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors">
+                                <span>Vedi catalogo</span>
+                                <i class="fas fa-arrow-right text-sm"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Atletica -->
-                <div class="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="images/ATLETICA.jpg" 
-                             alt="Atletica" 
-                             class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                        <div class="absolute top-4 left-4 bg-blue-600 text-white rounded-full px-3 py-1">
-                            <span class="text-xs font-bold">SPEED</span>
-                        </div>
-                        <!-- Icon Overlay -->
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="bg-blue-600/90 backdrop-blur-sm rounded-full p-4 transform scale-0 group-hover:scale-100 transition-transform duration-500">
-                                <i class="fas fa-running text-white text-2xl"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">Atletica</h3>
-                        <p class="text-gray-600 text-sm mb-4">Performance e stile per ogni disciplina</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-blue-600 font-semibold text-sm flex items-center">
-                                Scopri di più
-                                <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
-                            </span>
-                            <div class="flex items-center space-x-1">
-                                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                <span class="text-gray-500 text-xs">4.8</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Triathlon -->
-                <div class="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="relative h-56 overflow-hidden">
+                <!-- Triathlon Custom Works -->
+                <div class="relative group cursor-pointer overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <div class="relative h-[calc(100vh-100px)] overflow-hidden">
                         <img src="images/TRIATHLON.jpg" 
-                             alt="Triathlon" 
+                             alt="Triathlon Custom Works" 
                              class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                        <div class="absolute top-4 left-4 bg-green-600 text-white rounded-full px-3 py-1">
-                            <span class="text-xs font-bold">ENDURANCE</span>
-                        </div>
-                        <!-- Icon Overlay -->
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="bg-green-600/90 backdrop-blur-sm rounded-full p-4 transform scale-0 group-hover:scale-100 transition-transform duration-500">
-                                <i class="fas fa-swimmer text-white text-2xl"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-green-600 transition-colors">Triathlon</h3>
-                        <p class="text-gray-600 text-sm mb-4">Versatilità per le tre discipline</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-green-600 font-semibold text-sm flex items-center">
-                                Scopri di più
-                                <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
-                            </span>
-                            <div class="flex items-center space-x-1">
-                                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                <span class="text-gray-500 text-xs">4.7</span>
-                            </div>
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <!-- Content Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white text-center">
+                            <h3 class="text-4xl font-bold mb-4">Triathlon<br>Custom Works</h3>
+                            
+                            <!-- Vedi Catalogo Button -->
+                            <button class="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors">
+                                <span>Vedi catalogo</span>
+                                <i class="fas fa-arrow-right text-sm"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Pattinaggio -->
-                <div class="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="images/PATTINAGGIO.jpg" 
-                             alt="Pattinaggio" 
+                <!-- Running Custom Works -->
+                <div class="relative group cursor-pointer overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <div class="relative h-[calc(100vh-100px)] overflow-hidden">
+                        <img src="images/ATLETICA.jpg" 
+                             alt="Running Custom Works" 
                              class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                        <div class="absolute top-4 left-4 bg-pink-600 text-white rounded-full px-3 py-1">
-                            <span class="text-xs font-bold">STYLE</span>
-                        </div>
-                        <!-- Icon Overlay -->
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="bg-pink-600/90 backdrop-blur-sm rounded-full p-4 transform scale-0 group-hover:scale-100 transition-transform duration-500">
-                                <i class="fas fa-skating text-white text-2xl"></i>
-                            </div>
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <!-- Content Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white text-center">
+                            <h3 class="text-4xl font-bold mb-4">Running<br>Custom Works</h3>
+                            
+                            <!-- Vedi Catalogo Button -->
+                            <button class="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors">
+                                <span>Vedi catalogo</span>
+                                <i class="fas fa-arrow-right text-sm"></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors">Pattinaggio</h3>
-                        <p class="text-gray-600 text-sm mb-4">Eleganza e agilità su ghiaccio</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-pink-600 font-semibold text-sm flex items-center">
-                                Scopri di più
-                                <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform duration-300"></i>
-                            </span>
-                            <div class="flex items-center space-x-1">
-                                <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                <span class="text-gray-500 text-xs">4.9</span>
-                            </div>
+                </div>
+
+                <!-- Accessori Custom Works -->
+                <div class="relative group cursor-pointer overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <div class="relative h-[calc(100vh-100px)] overflow-hidden">
+                        <img src="images/PATTINAGGIO.jpg" 
+                             alt="Accessori Custom Works" 
+                             class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        
+                        <!-- Content Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white text-center">
+                            <h3 class="text-4xl font-bold mb-4">Accessori<br>Custom Works</h3>
+                            
+                            <!-- Vedi Catalogo Button -->
+                            <button class="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors">
+                                <span>Vedi catalogo</span>
+                                <i class="fas fa-arrow-right text-sm"></i>
+                            </button>
                         </div>
                     </div>
                 </div>

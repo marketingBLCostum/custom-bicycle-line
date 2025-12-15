@@ -199,7 +199,7 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-lg z-50 border-b border-gray-100">
+    <nav id="navbar" class="fixed w-full bg-white/95 backdrop-blur-md shadow-lg z-50 border-b border-gray-100 transition-transform duration-300">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <!-- Left side - Navigation links -->
@@ -1158,6 +1158,35 @@
         });
     </script>
 <script>
+        // Navigation scroll behavior
+        let lastScrollTop = 0;
+        let scrollThreshold = 50; // Minimum scroll to trigger hide/show
+        
+        function handleScroll() {
+            const navbar = document.getElementById('navbar');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Don't hide/show if we're at the very top
+            if (scrollTop <= 0) {
+                navbar.style.transform = 'translateY(0)';
+                return;
+            }
+            
+            // Check if we scrolled enough to trigger the effect
+            const scrollDelta = Math.abs(scrollTop - lastScrollTop);
+            
+            if (scrollDelta > scrollThreshold) {
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down - hide navbar
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up - show navbar
+                    navbar.style.transform = 'translateY(0)';
+                }
+                lastScrollTop = scrollTop;
+            }
+        }
+
         // Translation data
         const translations = {
             it: {
@@ -1263,6 +1292,15 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize language
             initializeLanguage();
+
+            // Add scroll event listener for navbar
+            let scrollTimer;
+            window.addEventListener('scroll', () => {
+                if (scrollTimer) {
+                    clearTimeout(scrollTimer);
+                }
+                scrollTimer = setTimeout(handleScroll, 10);
+            });
 
             // Desktop dropdown
             document.getElementById('language-dropdown-btn').addEventListener('click', (e) => {

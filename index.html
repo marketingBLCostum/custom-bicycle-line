@@ -369,23 +369,30 @@
             </div>
 
             <!-- Sport Buttons -->
-            <div class="flex justify-center space-x-4 mb-12">
-                <button class="sport-btn active" data-sport="ciclismo">
-                    <i class="fas fa-bicycle"></i>
-                    <span>Ciclismo</span>
-                </button>
-                <button class="sport-btn" data-sport="atletica">
-                    <i class="fas fa-running"></i>
-                    <span>Atletica</span>
-                </button>
-                <button class="sport-btn" data-sport="triathlon">
-                    <i class="fas fa-swimmer"></i>
-                    <span>Triathlon</span>
-                </button>
-                <button class="sport-btn" data-sport="pattinaggio">
-                    <i class="fas fa-skating"></i>
-                    <span>Pattinaggio</span>
-                </button>
+            <div class="flex justify-center gap-12 mb-12">
+              <button class="sport-tab relative uppercase tracking-[0.14em] text-sm font-medium text-gray-700 hover:text-gray-900 transition"
+                      data-sport="ciclismo" type="button">
+                CICLISMO
+                <span class="sport-underline absolute left-0 -bottom-2 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-200"></span>
+              </button>
+
+              <button class="sport-tab relative uppercase tracking-[0.14em] text-sm font-medium text-gray-700 hover:text-gray-900 transition"
+                      data-sport="atletica" type="button">
+                ATLETICA
+                <span class="sport-underline absolute left-0 -bottom-2 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-200"></span>
+              </button>
+
+              <button class="sport-tab relative uppercase tracking-[0.14em] text-sm font-medium text-gray-700 hover:text-gray-900 transition"
+                      data-sport="triathlon" type="button">
+                TRIATHLON
+                <span class="sport-underline absolute left-0 -bottom-2 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-200"></span>
+              </button>
+
+              <button class="sport-tab relative uppercase tracking-[0.14em] text-sm font-medium text-gray-700 hover:text-gray-900 transition"
+                      data-sport="pattinaggio" type="button">
+                PATTINAGGIO
+                <span class="sport-underline absolute left-0 -bottom-2 h-[2px] w-full bg-black scale-x-0 origin-left transition-transform duration-200"></span>
+              </button>
             </div>
 
             <!-- Designs Grid -->
@@ -1339,7 +1346,31 @@
             document.addEventListener('click', () => {
                 closeAllDropdowns();
             });
+
+            // Sport tabs functionality
+            document.querySelectorAll(".sport-tab").forEach(tab => {
+                tab.addEventListener("click", () => {
+                    document.querySelectorAll(".sport-tab").forEach(t => t.classList.remove("active","font-semibold"));
+                    tab.classList.add("active","font-semibold");
+                });
+            });
+
+            // Set default active tab
+            document.querySelector('.sport-tab[data-sport="ciclismo"]')?.classList.add("active","font-semibold");
         });
     </script>
+    
+    <style>
+        .sport-tab.active{
+            background: transparent !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            color: inherit !important;
+        }
+        .sport-tab.active .sport-underline{
+            transform: scaleX(1);
+        }
+    </style>
 </body>
 </html>

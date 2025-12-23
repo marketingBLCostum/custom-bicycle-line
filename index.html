@@ -308,6 +308,10 @@
             <div class="hero-slide">
                 <img src="images/Home3.png" alt="Hero Background 3">
             </div>
+            <!-- Slide 4 -->
+            <div class="hero-slide">
+                <img src="images/Home4.png" alt="Hero Background 4">
+            </div>
         </div>
         
         <!-- Overlay for all slides -->
@@ -318,6 +322,7 @@
             <div class="hero-indicator active" data-slide="0"></div>
             <div class="hero-indicator" data-slide="1"></div>
             <div class="hero-indicator" data-slide="2"></div>
+            <div class="hero-indicator" data-slide="3"></div>
         </div>
         
         <!-- Content Overlay -->
@@ -1652,11 +1657,18 @@
             }
 
             function startSlideshow() {
+                // Clear any existing timer before starting a new one
+                if (slideTimer) {
+                    clearInterval(slideTimer);
+                }
                 slideTimer = setInterval(nextSlide, slideInterval);
             }
 
             function stopSlideshow() {
-                clearInterval(slideTimer);
+                if (slideTimer) {
+                    clearInterval(slideTimer);
+                    slideTimer = null;
+                }
             }
 
             // Add click events to indicators
@@ -1673,8 +1685,26 @@
 
             // Pause slideshow on hover, resume on mouse leave
             const heroSection = document.getElementById('home');
-            heroSection.addEventListener('mouseenter', stopSlideshow);
-            heroSection.addEventListener('mouseleave', startSlideshow);
+            let isHovering = false;
+            
+            heroSection.addEventListener('mouseenter', () => {
+                isHovering = true;
+                stopSlideshow();
+            });
+            
+            heroSection.addEventListener('mouseleave', () => {
+                isHovering = false;
+                startSlideshow();
+            });
+            
+            // Also handle visibility change to prevent issues when tab is not visible
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    stopSlideshow();
+                } else if (!isHovering) {
+                    startSlideshow();
+                }
+            });
         });
     </script>
     

@@ -53,28 +53,60 @@
             font-weight: 600;
         }
         
-        .hero-background {
-            background-image: url('images/gemini-2.5-flash-image_falla_in_orizzontale-0.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        /* Hero Carousel Styles */
+        .hero-carousel {
             position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
         
-        .hero-background::before {
-            content: '';
+        .hero-slide {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
         }
         
-        .hero-content {
-            position: relative;
-            z-index: 2;
+        .hero-slide.active {
+            opacity: 1;
+        }
+        
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 20;
+        }
+        
+        .hero-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-indicator.active {
+            background: white;
+            transform: scale(1.2);
+        }
+        
+        .hero-indicator:hover {
+            background: rgba(255, 255, 255, 0.8);
         }
         
         .sport-card {
@@ -262,20 +294,39 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <!-- Background Image -->
-        <div class="absolute inset-0 z-0">
-            <img src="images/home.png" 
-                 alt="Hero Background" 
-                 class="w-full h-full object-cover">
+        <!-- Hero Carousel -->
+        <div class="hero-carousel absolute inset-0 z-0">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <img src="images/Home.png" alt="Hero Background 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <img src="images/Home2.png" alt="Hero Background 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <img src="images/Home3.png" alt="Hero Background 3">
+            </div>
+        </div>
+        
+        <!-- Overlay for all slides -->
+        <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+        
+        <!-- Carousel Indicators -->
+        <div class="hero-indicators">
+            <div class="hero-indicator active" data-slide="0"></div>
+            <div class="hero-indicator" data-slide="1"></div>
+            <div class="hero-indicator" data-slide="2"></div>
         </div>
         
         <!-- Content Overlay -->
-        <div class="relative z-10 container mx-auto px-6">
-            <div class="max-w-4xl text-center">
-                <h1 class="text-5xl md:text-7xl font-black text-white mb-6 section-title" data-lang="hero-title">
+        <div class="relative z-20 container mx-auto px-6 flex flex-col items-center justify-center h-full">
+            <div class="mb-8 mt-64">
+                <h1 class="text-5xl md:text-7xl font-black text-white mb-6 section-title text-center" data-lang="hero-title">
                     BL Custom Lab
                 </h1>
-                <p class="text-xl md:text-2xl text-white font-light" data-lang="hero-subtitle">
+                <p class="text-xl md:text-2xl text-white font-light text-center" data-lang="hero-subtitle">
                     Personalizza la divisa del tuo Team
                 </p>
             </div>
@@ -1575,6 +1626,55 @@
                     console.error('Error submitting form:', error);
                 }
             });
+
+            // Hero Carousel functionality
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.hero-slide');
+            const indicators = document.querySelectorAll('.hero-indicator');
+            const slideInterval = 5000; // 5 seconds per slide
+            let slideTimer;
+
+            function showSlide(index) {
+                // Remove active class from all slides and indicators
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+                
+                // Add active class to current slide and indicator
+                slides[index].classList.add('active');
+                indicators[index].classList.add('active');
+                
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            function startSlideshow() {
+                slideTimer = setInterval(nextSlide, slideInterval);
+            }
+
+            function stopSlideshow() {
+                clearInterval(slideTimer);
+            }
+
+            // Add click events to indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    stopSlideshow();
+                    showSlide(index);
+                    startSlideshow();
+                });
+            });
+
+            // Start slideshow when page loads
+            startSlideshow();
+
+            // Pause slideshow on hover, resume on mouse leave
+            const heroSection = document.getElementById('home');
+            heroSection.addEventListener('mouseenter', stopSlideshow);
+            heroSection.addEventListener('mouseleave', startSlideshow);
         });
     </script>
     

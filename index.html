@@ -237,46 +237,112 @@
     <!-- Navigation -->
     <!-- Top Bar -->
     <nav id="navbar" class="w-full bg-white border-b border-gray-200">
-        <div class="container mx-auto px-6">
-            <div class="flex justify-between items-center h-20 relative">
-                <!-- Left Navigation -->
-                <div class="hidden lg:flex items-center space-x-10">
-                    <a href="#" class="text-black hover:text-black font-black uppercase tracking-[0.22em] text-[11px]">ISPIRAZIONI</a>
-                    <a href="#" class="text-black hover:text-black font-black uppercase tracking-[0.22em] text-[11px]">CREA LA TUA DIVISA</a>
-                    <a href="#" class="text-black hover:text-black font-black uppercase tracking-[0.22em] text-[11px]">CHI SIAMO</a>
+        <div class="bg-black text-white">
+            <div class="container mx-auto px-6">
+                <div class="h-8 flex items-center justify-between text-[11px]">
+                    <div class="hidden md:flex items-center space-x-4">
+                        <div class="relative group">
+                            <button class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+                                <img src="images/BANDIERE/italia.jpg" alt="Italiano" class="w-5 h-3.5 object-cover rounded-sm">
+                                <span>Italiano</span>
+                                <i class="fas fa-chevron-down text-[10px] opacity-70"></i>
+                            </button>
+                            <div class="absolute left-0 mt-1 w-40 bg-white text-gray-800 rounded-sm shadow-lg z-50 hidden group-hover:block">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
+                                    <img src="images/BANDIERE/italia.jpg" alt="Italiano" class="w-5 h-3.5 object-cover rounded-sm">
+                                    <span>Italiano</span>
+                                </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
+                                    <img src="images/BANDIERE/english.jpg" alt="English" class="w-5 h-3.5 object-cover rounded-sm">
+                                    <span>English</span>
+                                </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
+                                    <img src="images/BANDIERE/Deutsch.jpg" alt="Deutsch" class="w-5 h-3.5 object-cover rounded-sm">
+                                    <span>Deutsch</span>
+                                </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
+                                    <img src="images/BANDIERE/Français.jpg" alt="Français" class="w-5 h-3.5 object-cover rounded-sm">
+                                    <span>Français</span>
+                                </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
+                                    <img src="images/BANDIERE/Español.jpg" alt="Español" class="w-5 h-3.5 object-cover rounded-sm">
+                                    <span>Español</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="hover:underline">Brand</a>
+                        <a href="#" class="hover:underline">Blog</a>
+                        <a href="#contatti" class="hover:underline">Contattaci</a>
+                        <a href="#faq" class="hover:underline">FAQ</a>
+                    </div>
                 </div>
-
-                <!-- Center Logo -->
-                <div class="absolute left-1/2 transform -translate-x-1/2">
-                    <a href="#" class="block">
-                        <img src="images/logodfs.png" alt="MILREMO CUSTOM CYCLING CLOTHING" class="h-10 w-auto">
-                    </a>
-                </div>
-
-                <!-- Right Section -->
-                <div class="hidden lg:flex items-center space-x-6">
-                    <!-- Design Now Button -->
-                    <a href="#" class="bg-black hover:bg-black text-white font-black px-10 py-3 transition-colors uppercase tracking-[0.22em] text-[11px] rounded-none">
-                        RICHIEDI UN PROGETTO
-                    </a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="lg:hidden text-gray-900">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
-            <div class="px-6 py-4 space-y-2">
-                <a href="#" class="block px-4 py-3 text-black hover:text-black hover:bg-gray-50 rounded-lg transition-all duration-200 font-black uppercase tracking-[0.22em] text-[11px]">ISPIRAZIONI</a>
-                <a href="#" class="block px-4 py-3 text-black hover:text-black hover:bg-gray-50 rounded-lg transition-all duration-200 font-black uppercase tracking-[0.22em] text-[11px]">CREA LA TUA DIVISA</a>
-                <a href="#" class="block px-4 py-3 text-black hover:text-black hover:bg-gray-50 rounded-lg transition-all duration-200 font-black uppercase tracking-[0.22em] text-[11px]">CHI SIAMO</a>
-                <div class="pt-3">
-                    <a href="#" class="block text-center bg-black hover:bg-black text-white font-black px-6 py-3 transition-colors uppercase tracking-[0.22em] text-[11px]">
-                        RICHIEDI UN PROGETTO
+
+        <div class="bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="h-20 flex items-center justify-between gap-6">
+                    <a href="#" class="flex items-center">
+                        <img src="images/logodfs.png" alt="MILREMO CUSTOM CYCLING CLOTHING" class="h-10 w-auto">
                     </a>
+
+                    <div class="hidden md:flex flex-1 justify-center">
+                        <div class="w-full max-w-xl relative">
+                            <input type="text" placeholder="Cerca tra oltre 2000 prodotti in pronta consegna" class="w-full h-11 pl-4 pr-12 bg-white border border-gray-300 rounded-sm text-[12px] text-gray-800 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400">
+                            <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-700">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:flex items-center space-x-5 text-gray-800">
+                        <a href="#" class="hover:text-black" aria-label="Account"><i class="far fa-user text-lg"></i></a>
+                        <a href="#" class="hover:text-black" aria-label="Wishlist"><i class="far fa-heart text-lg"></i></a>
+                        <a href="#" class="hover:text-black" aria-label="Carrello"><i class="fas fa-shopping-bag text-lg"></i></a>
+                    </div>
+
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-900" aria-label="Apri menu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+
+                <div class="pb-4 md:hidden">
+                    <div class="w-full relative">
+                        <input type="text" placeholder="Cerca prodotti" class="w-full h-11 pl-4 pr-12 bg-white border border-gray-300 rounded-sm text-[12px] text-gray-800 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400">
+                        <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-700">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white border-t border-gray-200">
+            <div class="container mx-auto px-6">
+                <div class="hidden lg:flex items-center justify-center space-x-8 h-12">
+                    <a href="#" class="text-gray-900 hover:text-black font-black uppercase tracking-[0.18em] text-[11px]">UOMO</a>
+                    <a href="#" class="text-gray-900 hover:text-black font-black uppercase tracking-[0.18em] text-[11px]">DONNA</a>
+                    <a href="#" class="text-gray-900 hover:text-black font-black uppercase tracking-[0.18em] text-[11px]">BAMBINO</a>
+                    <a href="#" class="text-gray-900 hover:text-black font-black uppercase tracking-[0.18em] text-[11px]">SALDI</a>
+                    <a href="#sport" class="text-gray-900 hover:text-black font-black uppercase tracking-[0.18em] text-[11px]">CUSTOM</a>
+                    <a href="#" class="text-gray-900 hover:text-black font-black uppercase tracking-[0.18em] text-[11px]">BICYCLE LINE</a>
+                    <a href="#" class="text-gray-900 hover:text-black font-black uppercase tracking-[0.18em] text-[11px]">GIFT CARD</a>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 bg-white">
+                <div class="px-6 py-4 grid grid-cols-2 gap-3">
+                    <a href="#" class="block px-3 py-2 text-gray-900 hover:text-black hover:bg-gray-50 rounded-md transition-all duration-200 font-black uppercase tracking-[0.18em] text-[11px]">UOMO</a>
+                    <a href="#" class="block px-3 py-2 text-gray-900 hover:text-black hover:bg-gray-50 rounded-md transition-all duration-200 font-black uppercase tracking-[0.18em] text-[11px]">DONNA</a>
+                    <a href="#" class="block px-3 py-2 text-gray-900 hover:text-black hover:bg-gray-50 rounded-md transition-all duration-200 font-black uppercase tracking-[0.18em] text-[11px]">BAMBINO</a>
+                    <a href="#" class="block px-3 py-2 text-gray-900 hover:text-black hover:bg-gray-50 rounded-md transition-all duration-200 font-black uppercase tracking-[0.18em] text-[11px]">SALDI</a>
+                    <a href="#sport" class="block px-3 py-2 text-gray-900 hover:text-black hover:bg-gray-50 rounded-md transition-all duration-200 font-black uppercase tracking-[0.18em] text-[11px]">CUSTOM</a>
+                    <a href="#" class="block px-3 py-2 text-gray-900 hover:text-black hover:bg-gray-50 rounded-md transition-all duration-200 font-black uppercase tracking-[0.18em] text-[11px]">BICYCLE LINE</a>
+                    <a href="#" class="block px-3 py-2 text-gray-900 hover:text-black hover:bg-gray-50 rounded-md transition-all duration-200 font-black uppercase tracking-[0.18em] text-[11px]">GIFT CARD</a>
+                    <a href="#contatti" class="block px-3 py-2 text-gray-900 hover:text-black hover:bg-gray-50 rounded-md transition-all duration-200 font-black uppercase tracking-[0.18em] text-[11px]">CONTATTACI</a>
+                    <a href="#faq" class="block px-3 py-2 text-gray-900 hover:text-black hover:bg-gray-50 rounded-md transition-all duration-200 font-black uppercase tracking-[0.18em] text-[11px]">FAQ</a>
                 </div>
             </div>
         </div>

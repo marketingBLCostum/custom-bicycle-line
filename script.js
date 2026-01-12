@@ -53,30 +53,32 @@ let formSubmitted = false;
 const contactForm = document.getElementById('contact-form');
 const successMessage = document.getElementById('success-message');
 
-// Show success message and reset form
-function showSuccessMessage() {
-    if (formSubmitted) {
+// Check for success parameter in URL on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === '1') {
         // Show success message
         successMessage.classList.remove('hidden');
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
         
-        // Reset form
-        contactForm.reset();
+        // Remove success parameter from URL without reloading
+        const newUrl = window.location.pathname;
+        window.history.replaceState({}, document.title, newUrl);
         
-        // Reset button state
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        submitButton.disabled = false;
-        submitButton.innerHTML = 'Invia Richiesta';
-        
-        // Hide success message after 5 seconds
+        // Hide message after 5 seconds
         setTimeout(() => {
             successMessage.classList.add('hidden');
         }, 5000);
-        
-        // Scroll to show success message
-        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        // Reset flag
-        formSubmitted = false;
+    }
+});
+
+// Show success message and reload page
+function showSuccessMessage() {
+    if (formSubmitted) {
+        // Add success parameter to URL and reload
+        const newUrl = window.location.pathname + '?success=1';
+        window.history.replaceState({}, document.title, newUrl);
+        window.location.reload();
     }
 }
 

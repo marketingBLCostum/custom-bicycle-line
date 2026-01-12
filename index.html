@@ -7,10 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;700;900&family=Anton:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;900&family=Orbitron:wght@400;700;900&family=Anton:wght@400&display=swap');
         
         body {
             font-family: 'Inter', sans-serif;
+        }
+
+        #navbar {
+            font-family: 'Montserrat', 'Inter', sans-serif;
         }
         
         .section-title {
@@ -232,97 +236,47 @@
 <body class="bg-gray-50">
     <!-- Navigation -->
     <!-- Top Bar -->
-    <div class="bg-black text-white text-sm">
-        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
-            <!-- Language Selector -->
-            <div class="flex items-center space-x-2">
-                <span class="text-gray-400">Lingua:</span>
-                <div class="relative">
-                    <button class="flex items-center space-x-1">
-                        <span class="font-medium">Italiano</span>
-                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Center Text -->
-            <div class="hidden md:block text-center">
-                <span class="text-gray-300">Divise personalizzate per team, club e aziende sportive</span>
-            </div>
-
-            <!-- Right Links -->
-            <div class="flex items-center space-x-6">
-                <a href="#" class="hover:text-gray-300">Contatti</a>
-                <div class="relative group">
-                    <button class="flex items-center hover:text-gray-300">
-                        <span>FAQ Custom</span>
-                        <svg class="ml-1" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Navigation -->
-    <nav class="bg-white shadow-md">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
+    <nav id="navbar" class="w-full bg-white border-b border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center h-20 relative">
                 <!-- Left Navigation -->
-                <div class="flex space-x-8">
-                    <a href="#" class="text-gray-800 hover:text-red-600 font-medium">Progetti</a>
-                    <a href="#" class="text-gray-800 hover:text-red-600 font-medium">Ispirazioni</a>
-                    <a href="#" class="text-gray-800 hover:text-red-600 font-medium">Come funziona</a>
-                    <a href="#" class="text-gray-800 hover:text-red-600 font-medium">Crea la tua divisa</a>
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="#" class="text-black hover:text-black font-black uppercase tracking-[0.22em] text-[11px]">ISPIRAZIONI</a>
+                    <a href="#" class="text-black hover:text-black font-black uppercase tracking-[0.22em] text-[11px]">CREA LA TUA DIVISA</a>
+                    <a href="#" class="text-black hover:text-black font-black uppercase tracking-[0.22em] text-[11px]">CHI SIAMO</a>
                 </div>
 
                 <!-- Center Logo -->
                 <div class="absolute left-1/2 transform -translate-x-1/2">
                     <a href="#" class="block">
-                        <img src="images/logodfs.png" alt="Logo" class="h-16 w-auto">
+                        <img src="images/logodfs.png" alt="MILREMO CUSTOM CYCLING CLOTHING" class="h-10 w-auto">
                     </a>
                 </div>
 
-                <!-- Right Button -->
-                <div>
-                    <button class="bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-2 rounded-md transition-colors">
+                <!-- Right Section -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <!-- Design Now Button -->
+                    <a href="#" class="bg-black hover:bg-black text-white font-black px-10 py-3 transition-colors uppercase tracking-[0.22em] text-[11px] rounded-none">
                         RICHIEDI UN PROGETTO
-                    </button>
+                    </a>
                 </div>
-            </div>
-        </div>
-    </nav>
-                        </div>
-                    </div>
-                </div>
-                
+
                 <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-900">
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-900">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
             <div class="px-6 py-4 space-y-2">
-                <a href="https://www.bicycle-line.com/it/" class="block px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-home" target="_blank">Home</a>
-                <a href="#portfolio" class="block px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-inspiration">Prendi Ispirazione</a>
-                <a href="#sport" class="block px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-create">Crea la tua Divisa</a>
-                <a href="#contatti" class="block px-4 py-3 text-gray-700 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 font-medium" data-lang="nav-contact">Contatti</a>
-                <div class="pt-4 border-t border-gray-200">
-                    <div class="relative">
-                        <button id="mobile-language-dropdown-btn" class="flex items-center space-x-1 text-gray-700 hover:text-black transition-colors duration-200 w-full">
-                            <span class="underline underline-offset-4 decoration-2">Italiano</span>
-                            <i class="fas fa-chevron-down text-xs"></i>
-                        </button>
-                        <div id="mobile-language-dropdown" class="absolute left-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible transition-all duration-200 z-50">
-                            <button class="mobile-language-option w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors" data-lang="it">Italiano</button>
-                            <button class="mobile-language-option w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors" data-lang="en">English</button>
-                        </div>
-                    </div>
+                <a href="#" class="block px-4 py-3 text-black hover:text-black hover:bg-gray-50 rounded-lg transition-all duration-200 font-black uppercase tracking-[0.22em] text-[11px]">ISPIRAZIONI</a>
+                <a href="#" class="block px-4 py-3 text-black hover:text-black hover:bg-gray-50 rounded-lg transition-all duration-200 font-black uppercase tracking-[0.22em] text-[11px]">CREA LA TUA DIVISA</a>
+                <a href="#" class="block px-4 py-3 text-black hover:text-black hover:bg-gray-50 rounded-lg transition-all duration-200 font-black uppercase tracking-[0.22em] text-[11px]">CHI SIAMO</a>
+                <div class="pt-3">
+                    <a href="#" class="block text-center bg-black hover:bg-black text-white font-black px-6 py-3 transition-colors uppercase tracking-[0.22em] text-[11px]">
+                        RICHIEDI UN PROGETTO
+                    </a>
                 </div>
             </div>
         </div>

@@ -828,7 +828,10 @@
 
                     <!-- Right Column - Contact Form -->
                     <div>
-                        <form id="contact-form" class="bg-gray-900 p-8 border border-gray-800">
+                        <!-- Hidden iframe for form submission -->
+                        <iframe name="hidden-iframe" id="hidden-iframe" style="display:none;" onload="if(sent) { showSuccessMessage(); }"></iframe>
+                        
+                        <form id="contact-form" method="POST" action="https://hook.eu2.make.com/pxiuwmjdbat2fxz5yfqh9ya5lgh3qwec" target="hidden-iframe" class="bg-gray-900 p-8 border border-gray-800">
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div>
                                     <label class="block text-white font-semibold mb-2">Nome *</label>

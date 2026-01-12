@@ -46,13 +46,42 @@ document.querySelectorAll('.slide-in').forEach(el => {
     observer.observe(el);
 });
 
-// Form validation and submission
+// Global variable to track form submission
+let formSubmitted = false;
+
+// Form elements
 const contactForm = document.getElementById('contact-form');
 const successMessage = document.getElementById('success-message');
 
+// Show success message and reset form
+function showSuccessMessage() {
+    if (formSubmitted) {
+        // Show success message
+        successMessage.classList.remove('hidden');
+        
+        // Reset form
+        contactForm.reset();
+        
+        // Reset button state
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        submitButton.disabled = false;
+        submitButton.innerHTML = 'Invia Richiesta';
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+            successMessage.classList.add('hidden');
+        }, 5000);
+        
+        // Scroll to show success message
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Reset flag
+        formSubmitted = false;
+    }
+}
+
+// Client-side validation before form submission
 contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
     // Get form values
     const formData = {
         name: document.getElementById('name').value.trim(),
@@ -89,34 +118,23 @@ contactForm.addEventListener('submit', function(e) {
     }
 
     if (!isValid) {
+        e.preventDefault(); // Prevent form submission
         showError(errorMessage);
-        return;
+        return false;
     }
-
-    // Simulate form submission
+    
+    // If validation passes, prepare for submission
+    formSubmitted = true;
+    
+    // Show loading state on the submit button
     const submitButton = contactForm.querySelector('button[type="submit"]');
     submitButton.disabled = true;
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Invio in corso...';
-
-    setTimeout(() => {
-        // Reset form
-        contactForm.reset();
-        
-        // Show success message
-        successMessage.classList.remove('hidden');
-        
-        // Reset button
-        submitButton.disabled = false;
-        submitButton.innerHTML = 'Invia Richiesta';
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-            successMessage.classList.add('hidden');
-        }, 5000);
-
-        // Log form data (in a real application, this would be sent to a server)
-        console.log('Form submitted:', formData);
-    }, 1500);
+    
+    // The form will be submitted to the hidden iframe
+    // The iframe's onload event will handle showing the success message
+    
+    return true;
 });
 
 // Email validation helper function

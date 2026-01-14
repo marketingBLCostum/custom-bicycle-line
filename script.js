@@ -72,70 +72,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Show success message and reload page
+// Show success message and reset form
 function showSuccessMessage() {
     if (formSubmitted) {
-        // Add success parameter to URL and reload
-        const newUrl = window.location.pathname + '?success=1';
-        window.history.replaceState({}, document.title, newUrl);
-        window.location.reload();
+        // Show success message
+        successMessage.classList.remove('hidden');
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Re-enable submit button
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        submitButton.disabled = false;
+        submitButton.innerHTML = 'Invia Richiesta';
+        
+        // Hide message after 5 seconds and then reset form
+        setTimeout(() => {
+            successMessage.classList.add('hidden');
+            // Reset form only after message disappears
+            contactForm.reset();
+        }, 5000);
     }
 }
 
 // Client-side validation before form submission
 contactForm.addEventListener('submit', function(e) {
-    // Get form values
-    const formData = {
-        name: document.getElementById('name').value.trim(),
-        surname: document.getElementById('surname').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        sport: document.getElementById('sport').value,
-        message: document.getElementById('message').value.trim(),
-        privacy: document.getElementById('privacy').checked
-    };
-
-    // Validation
-    let isValid = true;
-    let errorMessage = '';
-
-    if (!formData.name || formData.name.length < 2) {
-        errorMessage = 'Il nome deve contenere almeno 2 caratteri.';
-        isValid = false;
-    } else if (!formData.surname || formData.surname.length < 2) {
-        errorMessage = 'Il cognome deve contenere almeno 2 caratteri.';
-        isValid = false;
-    } else if (!formData.email || !isValidEmail(formData.email)) {
-        errorMessage = 'Inserisci un\'email valida.';
-        isValid = false;
-    } else if (!formData.sport) {
-        errorMessage = 'Seleziona uno sport di interesse.';
-        isValid = false;
-    } else if (!formData.message || formData.message.length < 10) {
-        errorMessage = 'Il messaggio deve contenere almeno 10 caratteri.';
-        isValid = false;
-    } else if (!formData.privacy) {
-        errorMessage = 'Devi accettare la privacy policy.';
-        isValid = false;
-    }
-
-    if (!isValid) {
-        e.preventDefault(); // Prevent form submission
-        showError(errorMessage);
-        return false;
-    }
-    
-    // If validation passes, prepare for submission
+    // Show success message immediately when button is clicked
     formSubmitted = true;
+    showSuccessMessage();
     
-    // Show loading state on the submit button
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
-    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Invio in corso...';
-    
-    // The form will be submitted to the hidden iframe
-    // The iframe's onload event will handle showing the success message
-    
+    // Allow form submission to webhook
     return true;
 });
 

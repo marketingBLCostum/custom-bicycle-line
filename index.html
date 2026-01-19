@@ -288,27 +288,12 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative h-[420px] md:h-[520px] flex items-center justify-center bg-black overflow-hidden">
-        <!-- Hero Carousel -->
-        <div class="hero-carousel absolute inset-0 z-0">
-            <!-- Slide 1 -->
-            <div class="hero-slide active">
-                <img src="images/Home.png" alt="Hero Background 1">
-            </div>
-            <!-- Slide 2 -->
-            <div class="hero-slide">
-                <img src="images/Home2.png" alt="Hero Background 2">
-            </div>
-            <!-- Slide 3 -->
-            <div class="hero-slide">
-                <img src="images/Home3.png" alt="Hero Background 3">
-            </div>
-            <!-- Slide 4 -->
-            <div class="hero-slide">
-                <img src="images/Home4.png" alt="Hero Background 4">
-            </div>
+        <!-- Hero Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/Home.png" alt="Hero Background" class="w-full h-full object-cover">
         </div>
         
-        <!-- Overlay for all slides -->
+        <!-- Overlay -->
         <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
         
         <!-- Content Overlay -->
@@ -1112,32 +1097,12 @@
                     <div class="border-b border-gray-200 ml-16 mt-4"></div>
                 </div>
 
-                <!-- FAQ Item 7 -->
-                <div class="mb-4">
-                    <div class="flex items-start">
-                        <span class="faq-number text-gray-400 font-bold opacity-30 mr-4 text-lg min-w-[2ch]">07</span>
-                        <div class="flex-1">
-                            <button class="w-full flex items-center justify-between text-left faq-toggle group">
-                                <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
-                                    Possiamo modificare il design dopo averlo approvato?
-                                </h3>
-                                <span class="faq-icon text-gray-600 text-2xl font-light transition-transform duration-300 group-hover:text-gray-900">+</span>
-                            </button>
-                            <div class="hidden mt-4 pt-4 border-t border-gray-200 faq-content">
-                                <p class="text-gray-600 leading-relaxed">
-                                    Le modifiche sono possibili fino all'avvio della produzione. Dopo l'approvazione finale, eventuali cambiamenti possono influire su tempi e costi.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-b border-gray-200 ml-16 mt-4"></div>
-                </div>
-
+                
 
                 <!-- FAQ Item 10 -->
                 <div class="mb-4">
                     <div class="flex items-start">
-                        <span class="faq-number text-gray-400 font-bold opacity-30 mr-4 text-lg min-w-[2ch]">08</span>
+                        <span class="faq-number text-gray-400 font-bold opacity-30 mr-4 text-lg min-w-[2ch]">07</span>
                         <div class="flex-1">
                             <button class="w-full flex items-center justify-between text-left faq-toggle group">
                                 <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
@@ -1357,6 +1322,7 @@
         });
     </script>
 
+    <script>
         // Event listeners
         document.addEventListener('DOMContentLoaded', () => {
             // Sport tabs functionality
@@ -1425,79 +1391,6 @@
                 }
             });
 
-            // Hero Carousel functionality
-            let currentSlide = 0;
-            const slides = document.querySelectorAll('.hero-slide');
-            const indicators = document.querySelectorAll('.hero-indicator');
-            const slideInterval = 5000; // 5 seconds per slide
-            let slideTimer;
-
-            function showSlide(index) {
-                // Remove active class from all slides and indicators
-                slides.forEach(slide => slide.classList.remove('active'));
-                indicators.forEach(indicator => indicator.classList.remove('active'));
-                
-                // Add active class to current slide and indicator
-                slides[index].classList.add('active');
-                indicators[index].classList.add('active');
-                
-                currentSlide = index;
-            }
-
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            function startSlideshow() {
-                // Clear any existing timer before starting a new one
-                if (slideTimer) {
-                    clearInterval(slideTimer);
-                }
-                slideTimer = setInterval(nextSlide, slideInterval);
-            }
-
-            function stopSlideshow() {
-                if (slideTimer) {
-                    clearInterval(slideTimer);
-                    slideTimer = null;
-                }
-            }
-
-            // Add click events to indicators
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    stopSlideshow();
-                    showSlide(index);
-                    startSlideshow();
-                });
-            });
-
-            // Start slideshow when page loads
-            startSlideshow();
-
-            // Pause slideshow on hover, resume on mouse leave
-            const heroSection = document.getElementById('home');
-            let isHovering = false;
-            
-            heroSection.addEventListener('mouseenter', () => {
-                isHovering = true;
-                stopSlideshow();
-            });
-            
-            heroSection.addEventListener('mouseleave', () => {
-                isHovering = false;
-                startSlideshow();
-            });
-            
-            // Also handle visibility change to prevent issues when tab is not visible
-            document.addEventListener('visibilitychange', () => {
-                if (document.hidden) {
-                    stopSlideshow();
-                } else if (!isHovering) {
-                    startSlideshow();
-                }
-            });
         });
     </script>
     

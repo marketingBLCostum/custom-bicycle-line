@@ -253,30 +253,30 @@
             <div class="container mx-auto px-6">
                 <div class="h-8 flex items-center justify-between text-[11px]">
                     <div class="hidden md:flex items-center space-x-4">
-                            <div class="relative group" onmouseleave="this.querySelector('button').classList.remove('active')">
-                            <button id="lang-en" class="flex items-center space-x-2 hover:opacity-80 transition-opacity" onmouseenter="this.classList.add('active')">
+                            <div class="relative group">
+                            <button id="language-toggle" class="flex items-center space-x-2 hover:opacity-80 transition-opacity" onclick="toggleLanguageMenu(this)">
                                 <img src="images/BANDIERE/english.jpg" alt="English" class="w-5 h-3.5 object-cover rounded-sm">
                                 <span>English</span>
                                 <i class="fas fa-chevron-down text-[10px] opacity-70"></i>
                             </button>
-                            <div class="absolute left-0 mt-1 w-40 bg-white text-gray-800 rounded-sm shadow-lg z-50 hidden group-hover:block" onmouseenter="this.parentNode.querySelector('button').classList.add('active')">
-                                <a href="#" id="lang-it" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
+                            <div id="language-dropdown" class="absolute left-0 mt-1 w-40 bg-white text-gray-800 rounded-sm shadow-lg z-50 hidden" style="color: black !important;">
+                                <a href="#" id="lang-it" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 text-black">
                                     <img src="images/BANDIERE/italia.jpg" alt="Italian" class="w-5 h-3.5 object-cover rounded-sm">
                                     <span>Italian</span>
                                 </a>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 text-black">
                                     <img src="images/BANDIERE/english.jpg" alt="English" class="w-5 h-3.5 object-cover rounded-sm">
                                     <span>English</span>
                                 </a>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 text-black">
                                     <img src="images/BANDIERE/Deutsch.jpg" alt="Deutsch" class="w-5 h-3.5 object-cover rounded-sm">
                                     <span>Deutsch</span>
                                 </a>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 text-black">
                                     <img src="images/BANDIERE/Français.jpg" alt="Français" class="w-5 h-3.5 object-cover rounded-sm">
                                     <span>Français</span>
                                 </a>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 text-black">
                                     <img src="images/BANDIERE/Español.jpg" alt="Español" class="w-5 h-3.5 object-cover rounded-sm">
                                     <span>Español</span>
                                 </a>
@@ -1594,5 +1594,39 @@ After final confirmation and receipt of the deposit, the order can be put into p
                 currentLang.style.color = 'white'; // Mantiene il testo bianco
             }
         });
+
+        // Gestione menu a tendina al click
+        function toggleLanguageMenu(button) {
+            const dropdown = document.getElementById('language-dropdown');
+            if (dropdown.classList.contains('hidden')) {
+                // Chiudi altri menu aperti
+                document.querySelectorAll('.language-dropdown').forEach(d => d.classList.add('hidden'));
+                // Apri questo menu
+                dropdown.classList.remove('hidden');
+                button.classList.add('active');
+                // Aggiungi gestore per chiudere il menu cliccando fuori
+                setTimeout(() => {
+                    document.addEventListener('click', closeOnClickOutside);
+                }, 0);
+            } else {
+                closeLanguageMenu();
+            }
+        }
+
+        function closeLanguageMenu() {
+            const dropdown = document.getElementById('language-dropdown');
+            dropdown.classList.add('hidden');
+            const button = document.getElementById('language-toggle');
+            if (button) button.classList.remove('active');
+            document.removeEventListener('click', closeOnClickOutside);
+        }
+
+        function closeOnClickOutside(event) {
+            const dropdown = document.getElementById('language-dropdown');
+            const button = document.getElementById('language-toggle');
+            if (dropdown && !dropdown.contains(event.target) && button && !button.contains(event.target)) {
+                closeLanguageMenu();
+            }
+        }
     </script>
 </body>

@@ -53,7 +53,7 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
-        .sport-btn.active {
+        .group:hover .group-hover\:block {
             background: #1f2937;
             border-color: #1f2937;
             color: white;
@@ -253,13 +253,13 @@
             <div class="container mx-auto px-6">
                 <div class="h-8 flex items-center justify-between text-[11px]">
                     <div class="hidden md:flex items-center space-x-4">
-                        <div class="relative group">
-                            <button class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+                            <div class="relative group" onmouseleave="this.querySelector('button').classList.remove('active')">
+                            <button class="flex items-center space-x-2 hover:opacity-80 transition-opacity" onmouseenter="this.classList.add('active')">
                                 <img src="images/BANDIERE/italia.jpg" alt="Italiano" class="w-5 h-3.5 object-cover rounded-sm">
                                 <span>Italiano</span>
                                 <i class="fas fa-chevron-down text-[10px] opacity-70"></i>
                             </button>
-                            <div class="absolute left-0 mt-1 w-40 bg-white text-gray-800 rounded-sm shadow-lg z-50 hidden group-hover:block">
+                            <div class="absolute left-0 mt-1 w-40 bg-white text-gray-800 rounded-sm shadow-lg z-50 hidden group-hover:block" onmouseenter="this.parentNode.querySelector('button').classList.add('active')">
                                 <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2">
                                     <img src="images/BANDIERE/italia.jpg" alt="Italiano" class="w-5 h-3.5 object-cover rounded-sm">
                                     <span>Italiano</span>
@@ -793,6 +793,12 @@
                                     <p class="text-white font-semibold">Email</p>
                                     <p class="text-gray-300">custom@bicycle-line.com</p>
                                 </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4">
+                                <a href="#" id="lang-it" class="hover:text-gray-300">ITA</a>
+                                <span class="text-gray-600">|</span>
+                                <a href="#" id="lang-en" class="hover:text-gray-300">ENG</a>
                             </div>
 
                             <div class="flex items-center space-x-4">
@@ -1403,8 +1409,21 @@
     </script>
 
     <script>
-        // Event listeners
+        // Language switcher functionality
         document.addEventListener('DOMContentLoaded', () => {
+            // Handle language switching
+            const itaLink = document.getElementById('lang-it');
+            const engLink = document.getElementById('lang-en');
+            
+            if (engLink) {
+                engLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = 'ndex-en.html';
+                });
+            }
+            
+            // Set active language
+            if (itaLink) itaLink.classList.add('font-bold', 'text-blue-600');
             // Sport tabs functionality
             document.querySelectorAll(".sport-tab").forEach(tab => {
                 tab.addEventListener("click", () => {
@@ -1554,9 +1573,27 @@
             box-shadow: none !important;
             color: inherit !important;
         }
-        .sport-tab.active .sport-underline{
-            transform: scaleX(1);
-        }
     </style>
+    
+    <script>
+        // Gestione cambio lingua
+        document.addEventListener('DOMContentLoaded', function() {
+            // Pulsante inglese
+            const engLink = document.querySelector('.group a[href="#"]:has(img[alt="English"])');
+            if (engLink) {
+                engLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'ndex-en.html';
+                });
+            }
+            
+            // Evidenzia la lingua corrente
+            const currentLang = document.querySelector('.group a:has(img[alt="Italiano"])');
+            if (currentLang) {
+                currentLang.style.fontWeight = 'bold';
+                currentLang.style.opacity = '1';
+                currentLang.style.color = 'white'; // Mantiene il testo bianco
+            }
+        });
+    </script>
 </body>
-</html>

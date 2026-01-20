@@ -17,6 +17,18 @@
             font-family: 'Inter', sans-serif;
         }
         
+        /* Stile per allineare la scritta VERIFICATA nella seconda recensione */
+        #review-card-2 {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        #review-card-1 > div:last-child,
+        #review-card-2 > div:last-child {
+            margin-top: auto;
+        }
+        
         .section-title {
             font-family: 'Inter', sans-serif;
         }
@@ -912,7 +924,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <!-- Review Card 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div id="review-card-1" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                     <div class="flex justify-center mb-4">
                         <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full flex items-center space-x-1">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -923,7 +935,7 @@
                         </span>
                     </div>
                     <p class="text-gray-700 mb-4 italic">
-                        "Ottimo servizio di vendita. Prodotto super che rispetta ampiamente le aspettative. E il secondo acquisto e non sarà sicuramente l' ultimo"
+                        "Ottimi prodotti lo consiglio vivamente."
                     </p>
                     <div class="mt-4">
                         <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">VERIFICATA</span>
@@ -931,7 +943,7 @@
                 </div>
 
                 <!-- Review Card 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div id="review-card-2" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                     <div class="flex justify-center mb-4">
                         <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full flex items-center space-x-1">
                             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
@@ -942,7 +954,7 @@
                         </span>
                     </div>
                     <p class="text-gray-700 mb-4 italic">
-                        "È da anni che compro su Bicycle Line e non sono mai rimasto insoddisfatto sia per la qualità dei prodotti sia per la serietà dell'azienda."
+                        "Materiali di eccellente qualità."
                     </p>
                     <div class="mt-4">
                         <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">VERIFICATA</span>
@@ -961,7 +973,7 @@
                         </span>
                     </div>
                     <p class="text-gray-700 mb-4 italic">
-                        "È stata un'esperienza di acquisto eccellente. La merce è arrivata nei tempi previsti e la qualità del prodotto è superiore alle mie aspettative."
+                        "divise bellissime, con ottime finiture, tasche capienti e fantasie originali. Qualità/prezzo ottima!"
                     </p>
                     <div class="mt-4">
                         <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">VERIFICATA</span>

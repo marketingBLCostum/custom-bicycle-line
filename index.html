@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Stile per forzare il colore nero delle voci del menu a tendina */
-        #language-dropdown a,
-        #language-dropdown span {
-            color: #000 !important;
-        }
-        
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         
         body {
@@ -262,13 +256,13 @@
                     <div class="flex items-center space-x-4">
                             <div class="relative group">
                             <button id="language-toggle" class="flex items-center space-x-2 hover:opacity-80 transition-opacity" onclick="toggleLanguageMenu(this)">
-                                <img src="images/BANDIERE/italia.jpg" alt="Italiano" class="w-5 h-3.5 object-cover rounded-sm">
-                                <span>Italiano</span>
+                                <img src="images/BANDIERE/english.jpg" alt="English" class="w-5 h-3.5 object-cover rounded-sm">
+                                <span>English</span>
                                 <i class="fas fa-chevron-down text-[10px] opacity-70"></i>
                             </button>
                             <div id="language-dropdown" class="absolute left-0 mt-1 w-40 bg-white text-gray-800 rounded-sm shadow-lg z-50 hidden" style="color: black !important;">
                                 <a href="index.html" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 text-black">
-                                    <img src="images/BANDIERE/italia.jpg" alt="Italiano" class="w-5 h-3.5 object-cover rounded-sm">
+                                    <img src="images/BANDIERE/italia.jpg" alt="Italian" class="w-5 h-3.5 object-cover rounded-sm">
                                     <span>Italiano</span>
                                 </a>
                                 <a href="ndex-en.html" class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 text-black">
@@ -308,10 +302,10 @@
                     </a>
 
                     <div class="hidden lg:flex flex-1 items-center justify-center gap-8">
-                        <a href="#come-funziona" class="text-gray-900 hover:text-black text-[12px] font-medium uppercase tracking-[0.18em] transition">Come Funziona</a>
-                        <a href="#portfolio" class="text-gray-900 hover:text-black text-[12px] font-medium uppercase tracking-[0.18em] transition">Ispirazione</a>
-                        <a href="#sport" class="text-gray-900 hover:text-black text-[12px] font-medium uppercase tracking-[0.18em] transition">Crea la tua divisa</a>
-                        <a href="#contatti" class="text-gray-900 hover:text-black text-[12px] font-medium uppercase tracking-[0.18em] transition">Contattaci</a>
+                        <a href="#come-funziona" class="text-gray-900 hover:text-black text-[12px] font-medium uppercase tracking-[0.18em] transition">How it works</a>
+                        <a href="#portfolio" class="text-gray-900 hover:text-black text-[12px] font-medium uppercase tracking-[0.18em] transition">Inspiration</a>
+                        <a href="#sport" class="text-gray-900 hover:text-black text-[12px] font-medium uppercase tracking-[0.18em] transition">Create your kit</a>
+                        <a href="#contatti" class="text-gray-900 hover:text-black text-[12px] font-medium uppercase tracking-[0.18em] transition">Contact us</a>
                         <a href="#faq" class="text-gray-900 hover:text-black text-[12px] font-medium uppercase tracking-[0.18em] transition">FAQ</a>
                     </div>
 
@@ -322,10 +316,10 @@
 
                 <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-200 bg-white">
                     <div class="px-6 py-4 grid grid-cols-1 gap-3">
-                        <a href="#come-funziona" class="block text-center py-2 text-gray-900 hover:text-black font-medium text-sm transition">Come Funziona</a>
-                        <a href="#portfolio" class="block text-center py-2 text-gray-900 hover:text-black font-medium text-sm transition">Ispirazione</a>
-                        <a href="#sport" class="block text-center py-2 text-gray-900 hover:text-black font-medium text-sm transition">Crea la tua divisa</a>
-                        <a href="#contatti" class="block text-center py-2 text-gray-900 hover:text-black font-medium text-sm transition">Contattaci</a>
+                        <a href="#come-funziona" class="block text-center py-2 text-gray-900 hover:text-black font-medium text-sm transition">How it works</a>
+                        <a href="#portfolio" class="block text-center py-2 text-gray-900 hover:text-black font-medium text-sm transition">Inspiration</a>
+                        <a href="#sport" class="block text-center py-2 text-gray-900 hover:text-black font-medium text-sm transition">Create your kit</a>
+                        <a href="#contatti" class="block text-center py-2 text-gray-900 hover:text-black font-medium text-sm transition">Contact us</a>
                         <a href="#faq" class="block text-center py-2 text-gray-900 hover:text-black font-medium text-sm transition">FAQ</a>
                     </div>
                 </div>
@@ -347,14 +341,14 @@
         <div class="relative z-20 container mx-auto px-6 flex items-center h-full">
             <div class="max-w-2xl">
                 <h1 class="text-4xl md:text-6xl font-black text-white leading-[1.05] uppercase">
-                    CREA LA TUA DIVISA PERSONALIZZATA
+                    CREATE YOUR CUSTOM KIT
                 </h1>
                 <p class="mt-4 text-sm md:text-base text-white font-light">
-                    Crea la tua divisa personalizzata col nostro team di grafici
+                     Create your custom kit with our team of designers
                 </p>
                 <div class="mt-6 flex items-center gap-5">
-                    <a href="#portfolio" class="inline-flex items-center h-10 px-4 bg-white text-black text-[12px] font-medium">Panoramica prodotto</a>
-                    <a href="#contatti" class="text-white text-[12px] underline underline-offset-4">Richiedi Informazioni</a>
+                    <a href="#portfolio" class="inline-flex items-center h-10 px-4 bg-white text-black text-[12px] font-medium">Product overview</a>
+                    <a href="#contatti" class="text-white text-[12px] underline underline-offset-4">Request information</a>
                 </div>
             </div>
         </div>
@@ -366,10 +360,10 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-black text-gray-800 mb-4 section-title uppercase">
-                    COME FUNZIONA
+                    HOW IT WORKS
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Il processo semplice per creare il tuo abbigliamento personalizzato
+                    The simple process to create your custom sportswear
                 </p>
             </div>
 
@@ -380,9 +374,9 @@
                     <div class="mb-4">
                         <span class="text-gray-400 text-4xl font-bold opacity-30">01</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Prendi Ispirazione</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Get inspired</h3>
                     <div class="text-gray-600 text-sm leading-relaxed max-w-xs text-justify">
-                        <p>Raccontaci chi siete, i valori della vostra squadra e l'identità che volete trasmettere. Ogni progetto nasce dall'ascolto: colori, loghi, obiettivi e utilizzo finale sono il punto di partenza per un risultato davvero su misura.</p>
+                        <p>Tell us who you are, the values of your team and the identity you want to communicate. Every project starts from listening: colors, logos, objectives and final use are the starting point for a truly custom result.</p>
                     </div>
                 </div>
 
@@ -391,9 +385,9 @@
                     <div class="mb-4">
                         <span class="text-gray-400 text-4xl font-bold opacity-30">02</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Grafica</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Design</h3>
                     <div class="text-gray-600 text-sm leading-relaxed max-w-xs text-justify">
-                        <p>Il nostro team grafico sviluppa una proposta personalizzata partendo dalle tue indicazioni. Linee, proporzioni e resa su tessuto vengono studiate per garantire un design coerente, tecnico e riconoscibile.</p>
+                        <p>Our graphic team develops a personalized proposal starting from your indications. Lines, proportions and fabric rendering are studied to ensure a coherent, technical and recognizable design.</p>
                     </div>
                 </div>
 
@@ -402,9 +396,9 @@
                     <div class="mb-4">
                         <span class="text-gray-400 text-4xl font-bold opacity-30">03</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Design finale</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Final design</h3>
                     <div class="text-gray-600 text-sm leading-relaxed max-w-xs text-justify">
-                        <p>Una volta definito il concept, adattiamo il design ai capi selezionati. Vestibilità, materiali e dettagli vengono ottimizzati per offrire comfort, performance e uniformità su tutta la collezione.</p>
+                        <p>Once the concept is defined, we adapt the design to the selected items. Fit, materials and details are optimized to offer comfort, performance and uniformity across the entire collection.</p>
                     </div>
                 </div>
 
@@ -413,9 +407,9 @@
                     <div class="mb-4">
                         <span class="text-gray-400 text-4xl font-bold opacity-30">04</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">La Produzione</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Production</h3>
                     <div class="text-gray-600 text-sm leading-relaxed max-w-xs text-justify">
-                        <p>Dopo la tua approvazione, il design viene ottimizzato per la produzione. Ogni dettaglio viene curato per garantire la massima qualità di stampa e vestibilità, con un occhio di riguardo alla durabilità del capo.</p>
+                        <p>Once approved, the design is optimized for production. Every detail is curated to ensure the highest quality of printing and comfort, with particular attention to the durability of the garment.</p>
                     </div>
                 </div>
             </div>
@@ -428,10 +422,10 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 slide-in">
                 <h2 class="text-4xl font-black text-gray-800 mb-4 section-title uppercase">
-                    PRENDI ISPIRAZIONE
+                    GET INSPIRED
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Alcune delle creazioni personalizzate realizzate per i nostri clienti
+                    Some of the custom creations realized for our clients
                 </p>
             </div>
 
@@ -566,7 +560,7 @@
 
             <div class="text-center mt-12">
                 <a href="#contatti" class="inline-flex items-center h-12 px-6 bg-black text-white text-sm font-medium">
-                    Richiedi informazioni
+                    Request information
                 </a>
             </div>
         </div>
@@ -578,11 +572,11 @@
         <div class="container mx-auto">
             <div class="text-center mb-16 slide-in">
                 <h2 class="text-4xl font-black text-gray-800 mb-4 section-title uppercase">
-                    CREA LA TUA DIVISA
+                    CREATE YOUR KIT
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Creare divise personalizzate è un gioco da ragazzi!<br>
-                    Scegli uno sport e lascia che il nostro team di grafici pensi al resto
+                    Creating custom kits is easy!<br>
+                    Choose a sport and let our design team take care of the rest
                 </p>
             </div>
 
@@ -591,7 +585,7 @@
                 <!-- Ciclismo Custom Works -->
                 <div class="relative group cursor-pointer overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 bg-white">
                     <div class="relative aspect-[9/16] overflow-hidden">
-                        <img src="images/4_sport/ciclismo.png?v=1" 
+                        <img src="images/4_sport/ciclismo.png?v=1"  
                              alt="Ciclismo Custom Works" 
                              class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
                         
@@ -600,10 +594,10 @@
                         
                         <!-- Content Overlay -->
                         <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
-                            <h3 class="text-2xl font-bold mb-4 text-white">Ciclismo</h3>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Cycling</h3>
                             
                             <!-- Richiedi Catalogo Button -->
-                            <button onclick="scrollToContact('ciclismo')" class="inline-flex items-center h-12 px-6 bg-transparent border-2 border-white text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm font-medium">Richiedi catalogo</button>
+                            <button onclick="scrollToContact('ciclismo')" class="inline-flex items-center h-12 px-6 bg-transparent border-2 border-white text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm font-medium">Request catalogue</button>
                         </div>
                     </div>
                 </div>
@@ -623,7 +617,7 @@
                             <h3 class="text-2xl font-bold mb-4 text-white">Triathlon</h3>
                             
                             <!-- Richiedi Catalogo Button -->
-                            <button onclick="scrollToContact('triathlon')" class="inline-flex items-center h-12 px-6 bg-transparent border-2 border-white text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm font-medium">Richiedi catalogo</button>
+                            <button onclick="scrollToContact('triathlon')" class="inline-flex items-center h-12 px-6 bg-transparent border-2 border-white text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm font-medium">Request catalogue</button>
                         </div>
                     </div>
                 </div>
@@ -643,7 +637,7 @@
                             <h3 class="text-2xl font-bold mb-4 text-white">Running</h3>
                             
                             <!-- Richiedi Catalogo Button -->
-                            <button onclick="scrollToContact('running')" class="inline-flex items-center h-12 px-6 bg-transparent border-2 border-white text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm font-medium">Richiedi catalogo</button>
+                            <button onclick="scrollToContact('running')" class="inline-flex items-center h-12 px-6 bg-transparent border-2 border-white text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm font-medium">Request catalogue</button>
                         </div>
                     </div>
                 </div>
@@ -660,10 +654,10 @@
                         
                         <!-- Content Overlay -->
                         <div class="absolute bottom-0 left-0 right-0 p-6 text-center">
-                            <h3 class="text-2xl font-bold mb-4 text-white">Pattinaggio</h3>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Skating</h3>
                             
                             <!-- Richiedi Catalogo Button -->
-                            <button onclick="scrollToContact('pattinaggio')" class="inline-flex items-center h-12 px-6 bg-transparent border-2 border-white text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm font-medium">Richiedi catalogo</button>
+                            <button onclick="scrollToContact('pattinaggio')" class="inline-flex items-center h-12 px-6 bg-transparent border-2 border-white text-white hover:bg-white hover:bg-opacity-10 transition-colors text-sm font-medium">Request catalogue</button>
                         </div>
                     </div>
                 </div>
@@ -672,7 +666,7 @@
             <!-- Bottom CTA -->
             <div class="text-center mt-12">
                 <a href="#contatti" class="inline-flex items-center h-12 px-6 bg-black text-white text-sm font-medium">
-                    Contattaci per il tuo sport
+                    Contact us for your sport
                 </a>
             </div>
         </div>
@@ -682,7 +676,7 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-black text-gray-800 tracking-widest uppercase section-title">
-                    COSA CI RENDE DIVERSI?
+                    WHAT MAKES US DIFFERENT?
                 </h2>
             </div>
 
@@ -694,9 +688,9 @@
                             <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
                         </svg>
                     </div>
-                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">DESIGN SU MISURA</h3>
+                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">CUSTOM DESIGN</h3>
                     <p class="text-gray-600 text-base leading-relaxed max-w-xs mx-auto text-center">
-                        Divise progettate da zero per ciclismo, triathlon, atletica e pattinaggio, senza template predefiniti.
+                        Custom designs for cycling, triathlon, athletics, and skating, without predefined templates.
                     </p>
                 </div>
 
@@ -709,9 +703,9 @@
                             <path d="M12 2a15 15 0 0 0 0 20" />
                         </svg>
                     </div>
-                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">PRODOTTO IN ITALIA</h3>
+                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">MADE IN ITALY</h3>
                     <p class="text-gray-600 text-base leading-relaxed max-w-xs mx-auto text-center">
-                        Produzione Italiana in strutture specializzate, con elevati standard qualitativi e controllo diretto.
+                        Made in Italy in specialized facilities, with high quality standards and direct control.
                     </p>
                 </div>
 
@@ -725,9 +719,9 @@
                             <path d="M7 17h10" />
                         </svg>
                     </div>
-                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">FOCUS SUGLI SPONSOR</h3>
+                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">FOCUS ON SPONSORS</h3>
                     <p class="text-gray-600 text-base leading-relaxed max-w-xs mx-auto text-center">
-                        Loghi sponsor studiati per garantire massima visibilità, proporzioni corrette e leggibilità in gara e sui media.
+                        Sponsor logos designed to ensure maximum visibility, correct proportions and readability during the race and in the media.
                     </p>
                 </div>
 
@@ -739,9 +733,9 @@
                             <path d="M12 22V12" />
                         </svg>
                     </div>
-                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">ANTEPRIME 3D REALISTICHE</h3>
+                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">REALISTIC 3D PREVIEWS</h3>
                     <p class="text-gray-600 text-base leading-relaxed max-w-xs mx-auto text-center">
-                        Visualizzazioni 3D realistiche applicate sui capi reali per valutare il risultato finale prima della produzione.
+                        Realistic 3D visualizations applied to real garments to evaluate the final result before production.
                     </p>
                 </div>
 
@@ -752,9 +746,9 @@
                             <path d="M2 17l10 5 10-5" />
                             <path d="M2 12l10 5 10-5" />
                     </div>
-                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">COERENZA SU TUTTA LA LINEA</h3>
+                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">CONSISTENCY ACROSS THE LINE</h3>
                     <p class="text-gray-600 text-base leading-relaxed max-w-xs mx-auto text-center">
-                        Un unico progetto grafico adattato a maglie, pantaloni, body e accessori coordinati.
+                        A single graphic design adapted to coordinated shirts, trousers, bodysuits and accessories.
                     </p>
                 </div>
 
@@ -767,9 +761,9 @@
                             <path d="M9 16h6" />
                         </svg>
                     </div>
-                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">PROCESSO GUIDATO</h3>
+                    <h3 class="text-gray-800 font-black uppercase tracking-widest text-base mb-4 text-center">GUIDED PROCESS</h3>
                     <p class="text-gray-600 text-base leading-relaxed max-w-xs mx-auto text-center">
-                        Un metodo chiaro e strutturato, con revisioni incluse fino alla conferma finale del progetto.
+                        A clear and structured method, with revisions included until the final confirmation of the project.
                     </p>
                 </div>
             </div>
@@ -784,9 +778,9 @@
                     <!-- Left Column - Contact Info -->
                     <div class="text-white">
                         <div class="mb-12">
-                            <h2 class="text-5xl font-black mb-4 section-title uppercase">CONTATTACI</h2>
+                            <h2 class="text-5xl font-black mb-4 section-title uppercase">CONTACT US</h2>
                             <p class="text-gray-400 mb-12 leading-relaxed">
-                                Richiedi un preventivo personalizzato senza impegno. Il nostro team ti guiderà nella scelta del modello che più si avvicina alle tue esigenze.
+                                Request a personalized, no-obligation quote. Our team will guide you in choosing the model that best suits your needs.
                             </p>
                         </div>
 
@@ -818,7 +812,7 @@
                                     <i class="fas fa-map-marker-alt text-white"></i>
                                 </div>
                                 <div>
-                                    <p class="text-white font-semibold">Posizione</p>
+                                    <p class="text-white font-semibold">Position</p>
                                     <p class="text-gray-300">Via Francesco Ferrara, 2, 31030 Dosson TV</p>
                                 </div>
                             </div>
@@ -833,25 +827,25 @@
                         <form id="contact-form" method="POST" action="https://hook.eu2.make.com/pxiuwmjdbat2fxz5yfqh9ya5lgh3qwec" target="hidden-iframe" class="bg-gray-900 p-8 border border-gray-800">
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div>
-                                    <label class="block text-white font-semibold mb-2">Nome *</label>
-                                    <input type="text" id="name" name="nome" required 
+                                    <label class="block text-white font-semibold mb-2">Name *</label>
+                                    <input type="text" id="name" name="en nome" required 
                                            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white focus:border-white focus:outline-none transition"
-                                           placeholder="Il tuo nome">
+                                           placeholder="your name">
                                 </div>
                                 <div>
-                                    <label class="block text-white font-semibold mb-2">Cognome *</label>
-                                    <input type="text" id="surname" name="cognome" required 
+                                    <label class="block text-white font-semibold mb-2">Surname *</label>
+                                    <input type="text" id="surname" name="en cognome" required 
                                            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white focus:border-white focus:outline-none transition"
-                                           placeholder="Il tuo cognome">
-                                           <input type="hidden" name="lang" value="it">
+                                           placeholder="Your last name">
+                                           <input type="hidden" name="lang" value="en">
                                 </div>
                             </div>
 
                             <div class="mb-6">
-                                <label class="block text-white font-semibold mb-2">Nome Team *</label>
-                                <input type="text" id="team" name="nomeTeam" required 
+                                <label class="block text-white font-semibold mb-2">Team Name *</label>
+                                <input type="text" id="team" name="en nomeTeam" required 
                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white focus:border-white focus:outline-none transition"
-                                       placeholder="Nome della tua squadra">
+                                       placeholder="Name of your team">
                             </div>
 
 
@@ -859,50 +853,50 @@
                                 <label class="block text-white font-semibold mb-2">Email *</label>
                                 <input type="email" id="email" name="email" required 
                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white focus:border-white focus:outline-none transition"
-                                       placeholder="tua@email.com">
+                                       placeholder="your@email.com">
                             </div>
 
                             <div class="mb-6">
-                                <label class="block text-white font-semibold mb-2">Seleziona Sport *</label>
+                                <label class="block text-white font-semibold mb-2">Select Sports *</label>
                                 <select id="sport" name="sport" required 
                                         class="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white focus:border-white focus:outline-none transition">
-                                    <option value="">Seleziona uno sport</option>
-                                    <option value="ciclismo">Ciclismo</option>
-                                    <option value="atletica">Atletica/running</option>
+                                    <option value="">Select a sport</option>
+                                    <option value="ciclismo">Cycling</option>
+                                    <option value="atletica">Athletics/Running</option>
                                     <option value="triathlon">Triathlon</option>
-                                    <option value="pattinaggio">Pattinaggio</option>
-                                    <option value="altro">Altro</option>
+                                    <option value="pattinaggio">Skating</option>
+                                    <option value="altro">Other</option>
                                 </select>
                             </div>
 
                             <div class="mb-6">
-                                <label class="block text-white font-semibold mb-2">Numero di Atleti</label>
+                                <label class="block text-white font-semibold mb-2">Number of Athletes</label>
                                 <input type="number" id="athletes" name="numeroAtleti" 
                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white focus:border-white focus:outline-none transition"
-                                       placeholder="Numero di atleti del team">
+                                       placeholder="Number of athletes in the team">
                             </div>
 
                             <div class="mb-6">
-                                <label class="block text-white font-semibold mb-2">Messaggio</label>
+                                <label class="block text-white font-semibold mb-2">Message</label>
                                 <textarea id="message" name="messaggio" rows="4" 
                                            class="w-full px-4 py-3 h-32 bg-gray-800 border border-gray-700 text-white focus:border-white focus:outline-none transition resize-none hover:border-white"
-                                          placeholder="Scrivi qui qualsiasi informazione aggiuntiva o richiesta speciale..."></textarea>
+                                          placeholder="Please write any additional information or special requests here..."></textarea>
                             </div>
 
                             <button type="submit" 
                                     class="w-full inline-flex items-center justify-center h-12 px-6 bg-gray-800 border border-gray-700 text-white text-sm font-medium hover:border-white hover:bg-gray-700 transition">
-                                Invia Richiesta
+                                Send Request
                             </button>
                         </form>
 
                         <div id="success-message" class="hidden mt-6 bg-green-900 border border-green-700 text-green-300 px-6 py-4 rounded-lg">
                             <i class="fas fa-check-circle mr-2"></i>
-                            Richiesta inviata correttamente
+                            Request sent successfully
                         </div>
 
                         <div id="error-message" class="hidden mt-6 bg-red-900 border border-red-700 text-red-300 px-6 py-4 rounded-lg">
                             <i class="fas fa-exclamation-circle mr-2"></i>
-                            Errore invio, riprova
+                            Error sending, please try again
                         </div>
                     </div>
                 </div>
@@ -913,9 +907,9 @@
     <!-- Reviews Section -->
     <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-black text-gray-900 mb-4 uppercase">FIDATI DI LORO</h2>
+            <h2 class="text-4xl font-black text-gray-900 mb-4 uppercase">TRUST THEM</h2>
             <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-                Le opinioni dei nostri clienti sono il nostro patrimonio più prezioso. Per questo incoraggiamo ogni acquirente a condividere la sua esperienza, aiutando così altri sportivi a fare scelte consapevoli e permettendoci di migliorare continuamente il nostro servizio.
+                Our customers' opinions are our most valuable asset. Therefore, we encourage each customer to share their experiences, helping other athletes make informed choices and allowing us to continuously improve our service.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -931,10 +925,10 @@
                         </span>
                     </div>
                     <p class="text-gray-700 mb-4 italic">
-                        "Ottimi prodotti lo consiglio vivamente."
+                        "Excellent products, I highly recommend them."
                     </p>
                     <div class="mt-4">
-                        <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">VERIFICATA</span>
+                        <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">VERIFIED</span>
                     </div>
                 </div>
 
@@ -950,10 +944,10 @@
                         </span>
                     </div>
                     <p class="text-gray-700 mb-4 italic">
-                        "Materiali di eccellente qualità."
+                        "Excellent quality materials."
                     </p>
                     <div class="mt-4">
-                        <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">VERIFICATA</span>
+                        <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">VERIFIED</span>
                     </div>
                 </div>
 
@@ -969,10 +963,10 @@
                         </span>
                     </div>
                     <p class="text-gray-700 mb-4 italic">
-                        "divise bellissime, con ottime finiture!"
+                        "Beautiful uniforms, with excellent finishes!"
                     </p>
                     <div class="mt-4">
-                        <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">VERIFICATA</span>
+                        <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-semibold">VERIFIED</span>
                     </div>
                 </div>
             </div>
@@ -981,12 +975,12 @@
             <div class="bg-gray-50 rounded-lg p-8">
                 <div class="flex flex-col md:flex-row items-center justify-between">
                     <div class="mb-4 md:mb-0">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Leggi le nostre recensioni su Feedaty</h3>
-                        <p class="text-gray-600">Scopri cosa dicono di noi i nostri clienti</p>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Read our reviews on Feedaty</h3>
+                        <p class="text-gray-600">Find out what our customers say about us</p>
                     </div>
                     <div class="flex space-x-4">
                         <a href="https://www.feedaty.com/recensioni/bicycle-line" target="_blank" class="inline-flex items-center h-12 px-6 bg-black text-white text-sm font-medium">
-                            SCRIVI UNA RECENSIONE
+                            WRITE A REVIEW
                         </a>
                     </div>
                 </div>
@@ -999,10 +993,10 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-black text-gray-800 mb-4 section-title uppercase">
-                    FAQ – BL CUSTOM
+                    Frequently Asked Questions – BL CUSTOM
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Trova risposte alle domande più comuni sui nostri servizi e prodotti personalizzati
+                    Find answers to common questions about our customized services and products.
                 </p>
             </div>
 
@@ -1014,13 +1008,13 @@
                         <div class="flex-1">
                             <button class="w-full flex items-center justify-between text-left faq-toggle group">
                                 <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
-                                    Che cos'è il servizio Custom di Bicycle Line?
+                                    What is Bicycle Line's Custom service?
                                 </h3>
                                 <span class="faq-icon text-gray-600 text-2xl font-light transition-transform duration-300 group-hover:text-gray-900">+</span>
                             </button>
                             <div class="hidden mt-4 pt-4 border-t border-gray-200 faq-content">
                                 <p class="text-gray-600 leading-relaxed">
-                                    Il servizio Custom di Bicycle Line consente a team, club, aziende ed eventi di realizzare abbigliamento tecnico personalizzato per ciclismo, triathlon, atletica e pattinaggio: dalla progettazione grafica dedicata fino alla produzione finale.
+                                    Bicycle Line's Custom service allows teams, clubs, companies, and events to create customized technical apparel for cycling, triathlon, athletics, and skating: from dedicated graphic design to final production.
                                 </p>
                             </div>
                         </div>
@@ -1035,14 +1029,14 @@
                         <div class="flex-1">
                             <button class="w-full flex items-center justify-between text-left faq-toggle group">
                                 <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
-                                    Come posso avviare un progetto di personalizzazione?
+                                    How can I start a customization project?
                                 </h3>
                                 <span class="faq-icon text-gray-600 text-2xl font-light transition-transform duration-300 group-hover:text-gray-900">+</span>
                             </button>
                             <div class="hidden mt-4 pt-4 border-t border-gray-200 faq-content">
                                 <p class="text-gray-600 leading-relaxed">
-                                    È sufficiente inviare una richiesta tramite il modulo di contatto, indicando la disciplina e la quantità indicativa richiesta. In alternativa, puoi scrivere direttamente a custom@bicycle-line.com. 
-                                    Il nostro team ti fornirà le prime indicazioni di prezzo e, una volta confermato l'interesse, ti richiederà i loghi e il materiale grafico in tuo possesso per sviluppare correttamente il tuo progetto, dalla bozza grafica fino alla produzione finale.
+                                    Simply send a request via the contact form, indicating the discipline and approximate quantity required. Alternatively, you can write directly to custom@bicycle-line.com.
+Our team will provide you with an initial price estimate and, once you confirm your interest, will request your logos and artwork to properly develop your project, from the graphic design sketch to final production.
                                 </p>
                             </div>
                         </div>
@@ -1057,13 +1051,13 @@
                         <div class="flex-1">
                             <button class="w-full flex items-center justify-between text-left faq-toggle group">
                                 <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
-                                    Non abbiamo un design definito, potete aiutarci?
+                                    We don't have a defined design, can you help us?
                                 </h3>
                                 <span class="faq-icon text-gray-600 text-2xl font-light transition-transform duration-300 group-hover:text-gray-900">+</span>
                             </button>
                             <div class="hidden mt-4 pt-4 border-t border-gray-200 faq-content">
                                 <p class="text-gray-600 leading-relaxed">
-                                    Sì. Possiamo proporre diverse basi grafiche già pronte, tra cui scegliere, sulle quali applicare i loghi e i colori del team/club. In questo modo possiamo semplificare il processo e aiutarti a ottenere un risultato professionale senza dover sviluppare una grafica da zero.
+                                    Yes. We can offer several ready-made graphic bases to choose from, onto which you can apply your team/club's logos and colors. In this way, we can simplify the process and help you achieve a professional result without having to develop graphics from scratch.
                                 </p>
                             </div>
                         </div>
@@ -1078,13 +1072,13 @@
                         <div class="flex-1">
                             <button class="w-full flex items-center justify-between text-left faq-toggle group">
                                 <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
-                                    Qual è il numero minimo di pezzi per un ordine?
+                                    What is the minimum number of pieces for an order?
                                 </h3>
                                 <span class="faq-icon text-gray-600 text-2xl font-light transition-transform duration-300 group-hover:text-gray-900">+</span>
                             </button>
                             <div class="hidden mt-4 pt-4 border-t border-gray-200 faq-content">
                                 <p class="text-gray-600 leading-relaxed">
-                                    La quantità minima è di 10 pezzi per articolo.
+                                    The minimum quantity is 10 pieces per item.
                                 </p>
                             </div>
                         </div>
@@ -1099,15 +1093,15 @@
                         <div class="flex-1">
                             <button class="w-full flex items-center justify-between text-left faq-toggle group">
                                 <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
-                                    Quando può andare in produzione il mio ordine?
+                                    When can my order go into production?
                                 </h3>
                                 <span class="faq-icon text-gray-600 text-2xl font-light transition-transform duration-300 group-hover:text-gray-900">+</span>
                             </button>
                             <div class="hidden mt-4 pt-4 border-t border-gray-200 faq-content">
                                 <p class="text-gray-600 leading-relaxed">
-                                    Affinché l'ordine possa entrare in produzione, è necessario fornire tutti i dati del cliente (ragione sociale, dettagli di fatturazione e indirizzo di consegna).
-                                    Una volta raccolte le informazioni, prepareremo l'ordine completo e lo invieremo per conferma: prezzi, quantità, taglie e bozza grafica.
-                                    Dopo la conferma finale e il ricevimento dell'acconto, l'ordine potrà essere lanciato in produzione.
+                                    For your order to go into production, you must provide all your customer information (company name, billing details, and shipping address).
+Once we have collected this information, we will prepare the complete order and send it to you for confirmation: prices, quantities, sizes, and artwork.
+After final confirmation and receipt of the deposit, the order can be put into production.
                                 </p>
                             </div>
                         </div>
@@ -1122,13 +1116,13 @@
                         <div class="flex-1">
                             <button class="w-full flex items-center justify-between text-left faq-toggle group">
                                 <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
-                                    Qual è il tempo standard di consegna per un ordine personalizzato?
+                                    What is the standard delivery time for a custom order?
                                 </h3>
                                 <span class="faq-icon text-gray-600 text-2xl font-light transition-transform duration-300 group-hover:text-gray-900">+</span>
                             </button>
                             <div class="hidden mt-4 pt-4 border-t border-gray-200 faq-content">
                                 <p class="text-gray-600 leading-relaxed">
-                                    Normalmente, dopo l'approvazione del preventivo e della bozza grafica e a seguito del ricevimento dell'acconto, i tempi standard di produzione e consegna sono di circa 6 settimane. La tempistica può variare leggermente in base alla stagione.
+                                    Typically, after approval of the quote and artwork draft and receipt of the deposit, the standard production and delivery time is approximately 6 weeks. This may vary slightly depending on the season.
                                 </p>
                             </div>
                         </div>
@@ -1145,13 +1139,13 @@
                         <div class="flex-1">
                             <button class="w-full flex items-center justify-between text-left faq-toggle group">
                                 <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
-                                    Possiamo riordinare le divise in futuro?
+                                    Can we reorder uniforms in the future?
                                 </h3>
                                 <span class="faq-icon text-gray-600 text-2xl font-light transition-transform duration-300 group-hover:text-gray-900">+</span>
                             </button>
                             <div class="hidden mt-4 pt-4 border-t border-gray-200 faq-content">
                                 <p class="text-gray-600 leading-relaxed">
-                                    Sì, è possibile effettuare riordini mantenendo la stessa grafica. Per i riordini con design invariato, la quantità minima è di 5 pezzi per articolo.
+                                    Yes, you can reorder with the same artwork. For reorders with the same design, the minimum quantity is 5 pieces per item.
                                 </p>
                             </div>
                         </div>
@@ -1166,13 +1160,13 @@
                         <div class="flex-1">
                             <button class="w-full flex items-center justify-between text-left faq-toggle group">
                                 <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
-                                    Come posso selezionare correttamente la mia taglia?
+                                    How can I select my size correctly?
                                 </h3>
                                 <span class="faq-icon text-gray-600 text-2xl font-light transition-transform duration-300 group-hover:text-gray-900">+</span>
                             </button>
                             <div class="hidden mt-4 pt-4 border-t border-gray-200 faq-content">
                                 <p class="text-gray-600 leading-relaxed">
-                                    Quando sarà il momento di definire le taglie, sarà possibile richiedere un campionario taglie (campionario vestibilità)
+                                    When it's time to define the sizes, it will be possible to request a size sample (fit sample)
                                 </p>
                             </div>
                         </div>
@@ -1187,13 +1181,13 @@
                         <div class="flex-1">
                             <button class="w-full flex items-center justify-between text-left faq-toggle group">
                                 <h3 class="text-lg font-medium text-gray-900 max-w-[90%]">
-                                    Avete disponibili anche vestibilità per ragazzi?
+                                    Do you also have kids' sizes available?
                                 </h3>
                                 <span class="faq-icon text-gray-600 text-2xl font-light transition-transform duration-300 group-hover:text-gray-900">+</span>
                             </button>
                             <div class="hidden mt-4 pt-4 border-t border-gray-200 faq-content">
                                 <p class="text-gray-600 leading-relaxed">
-                                    Sì, abbiamo linee dedicate anche ai giovani sportivi, con taglie specifiche junior/ragazzo.
+                                    Yes, we also have lines dedicated to young athletes, with specific junior/kid sizes.
                                 </p>
                             </div>
                         </div>
@@ -1205,10 +1199,10 @@
             <!-- Contact CTA -->
             <div class="text-center mt-12">
                 <p class="text-gray-600 mb-4">
-                    Non hai trovato la risposta che cercavi?
+                    Didn't find the answer you were looking for?
                 </p>
                 <a href="#contatti" class="inline-flex items-center h-12 px-6 bg-black text-white text-sm font-medium">
-                    Contattaci
+                    Contact us
                 </a>
             </div>
         </div>
@@ -1228,9 +1222,9 @@
                     <h3 class="font-bold text-gray-800 mb-3">BICYCLE LINE</h3>
                     <ul class="space-y-1">
                         <li><a href="https://www.bicycle-line.com/it/content/4-brand" class="hover:text-gray-800 transition">Brand</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/6-storia" class="hover:text-gray-800 transition">Storia</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/9-sostenibilita" class="hover:text-gray-800 transition">Sostenibilità</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/contact" class="hover:text-gray-800 transition">Contattaci</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/6-storia" class="hover:text-gray-800 transition">History</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/9-sostenibilita" class="hover:text-gray-800 transition">Sustainability</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/contact" class="hover:text-gray-800 transition">Contact us</a></li>
                     </ul>
                 </div>
 
@@ -1238,37 +1232,37 @@
                 <div class="col-span-1">
                     <h3 class="font-bold text-gray-800 mb-3">SHOP</h3>
                     <ul class="space-y-1">
-                        <li><a href="https://www.bicycle-line.com/it/947-uomo" class="hover:text-gray-800 transition">Uomo</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/948-donna" class="hover:text-gray-800 transition">Donna</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/949-cat-bambino" class="hover:text-gray-800 transition">Bambino</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/1109-offerte" class="hover:text-gray-800 transition">Offerte</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/23-shop" class="hover:text-gray-800 transition">Guida allo shopping online</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/947-uomo" class="hover:text-gray-800 transition">Man</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/948-donna" class="hover:text-gray-800 transition">Woman</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/949-cat-bambino" class="hover:text-gray-800 transition">Child</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/1109-offerte" class="hover:text-gray-800 transition">Offers</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/23-shop" class="hover:text-gray-800 transition">Online shopping guide</a></li>
                     </ul>
                 </div>
 
                 <!-- LINK UTILI -->
                 <div class="col-span-1">
-                    <h3 class="font-bold text-gray-800 mb-3">LINK UTILI</h3>
+                    <h3 class="font-bold text-gray-800 mb-3">USEFUL LINKS</h3>
                     <ul class="space-y-1">
-                        <li><a href="https://www.bicycle-line.com/it/content/1-spedizione" class="hover:text-gray-800 transition">Spedizione</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/5-pagamento" class="hover:text-gray-800 transition">Pagamento</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/1-spedizione" class="hover:text-gray-800 transition">Shipping</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/5-pagamento" class="hover:text-gray-800 transition">Payment</a></li>
                         <li><a href="https://www.bicycle-line.com/it/content/18-faq" class="hover:text-gray-800 transition">FAQ</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/12-guida-alle-taglie" class="hover:text-gray-800 transition">Guida alle taglie</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/14-garanzia" class="hover:text-gray-800 transition">Utilizzo del prodotto e garanzia</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/13-resi" class="hover:text-gray-800 transition">Resi</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/12-guida-alle-taglie" class="hover:text-gray-800 transition">Size guide</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/14-garanzia" class="hover:text-gray-800 transition">Product use and warranty</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/13-resi" class="hover:text-gray-800 transition">Returns</a></li>
                     </ul>
                 </div>
 
                 <!-- NOTE LEGALI + CONTACT US -->
                 <div class="col-span-1">
-                    <h3 class="font-bold text-gray-800 mb-3">NOTE LEGALI</h3>
+                    <h3 class="font-bold text-gray-800 mb-3">LEGAL NOTES</h3>
                     <ul class="space-y-1">
                         <li><a href="https://www.bicycle-line.com/it/content/15-privacy-policy" class="hover:text-gray-800 transition">Privacy Policy</a></li>
                         <li><a href="https://www.bicycle-line.com/it/content/16-cookie-policy" class="hover:text-gray-800 transition">Cookie policy</a></li>
-                        <li><a href="https://www.bicycle-line.com/it/content/17-termini-e-condizioni" class="hover:text-gray-800 transition">Termini e condizioni</a></li>
+                        <li><a href="https://www.bicycle-line.com/it/content/17-termini-e-condizioni" class="hover:text-gray-800 transition">Terms and conditions</a></li>
                     </ul>
 
-                    <h3 class="font-bold text-gray-800 mb-3 mt-4">CONTÁCTENOS</h3>
+                    <h3 class="font-bold text-gray-800 mb-3 mt-4">CONTACT US</h3>
                     <ul class="space-y-1 text-xs">
                         <li class="font-semibold">Bicycle Line - VAT 02027450267</li>
                         <li>Via Ferrara, 2-4 31030 Dosson di Casier</li>
@@ -1411,15 +1405,15 @@
             const itaLink = document.getElementById('lang-it');
             const engLink = document.getElementById('lang-en');
             
-            if (engLink) {
-                engLink.addEventListener('click', (e) => {
+            if (itaLink) {
+                itaLink.addEventListener('click', (e) => {
                     e.preventDefault();
-                    window.location.href = 'ndex-en.html';
+                    window.location.href = 'index.html';
                 });
             }
             
             // Set active language
-            if (itaLink) itaLink.classList.add('font-bold', 'text-blue-600');
+            if (engLink) engLink.classList.add('font-bold', 'text-blue-600');
             // Sport tabs functionality
             document.querySelectorAll(".sport-tab").forEach(tab => {
                 tab.addEventListener("click", () => {
@@ -1574,17 +1568,17 @@
     <script>
         // Gestione cambio lingua
         document.addEventListener('DOMContentLoaded', function() {
-            // Pulsante inglese
-            const engLink = document.querySelector('.group a[href="#"]:has(img[alt="English"])');
-            if (engLink) {
-                engLink.addEventListener('click', function(e) {
+            // Pulsante italiano
+            const itaLink = document.getElementById('lang-it');
+            if (itaLink) {
+                itaLink.addEventListener('click', function(e) {
                     e.preventDefault();
-                    window.location.href = 'ndex-en.html';
+                    window.location.href = 'index.html';
                 });
             }
             
             // Evidenzia la lingua corrente
-            const currentLang = document.querySelector('.group a:has(img[alt="Italiano"])');
+            const currentLang = document.getElementById('lang-en');
             if (currentLang) {
                 currentLang.style.fontWeight = 'bold';
                 currentLang.style.opacity = '1';
